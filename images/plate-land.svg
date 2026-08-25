@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Land &amp; Ecology</title>
+  <desc id="d">Seasons and living systems</desc>
+  <rect width="800" height="520" fill="#f3e5cc"/>
+  <path d="M0 52 C120 16 206 85 328 40 C455 -7 565 60 800 14" fill="none" stroke="#c18b3f" stroke-width="5" opacity=".35"/>
+  <path d="M0 490 C148 452 242 515 401 472 C570 426 656 494 800 452" fill="none" stroke="#a9573e" stroke-width="6" opacity=".35"/>
+  
+          <path d="M70 376 C180 245 263 260 340 347 C423 440 502 286 587 248 C657 216 725 266 790 346" fill="none" stroke="#596246" stroke-width="16"/>
+          <path d="M73 404 C200 298 287 339 363 397 C460 471 525 345 604 314 C668 288 720 322 784 383" fill="none" stroke="#c18b3f" stroke-width="10"/>
+          <g fill="#a9573e"><circle cx="162" cy="269" r="24"/><circle cx="648" cy="238" r="18"/></g>
+          <path d="M161 292 v83 M131 327 h61 M648 256 v95 M624 291 h49" stroke="#596246" stroke-width="10"/>
+        
+  <rect x="28" y="27" width="744" height="466" rx="9" fill="none" stroke="#2d332c" stroke-width="3" opacity=".18"/>
+  <text x="48" y="72" font-family="Georgia, serif" font-size="25" fill="#2d332c" letter-spacing="2">LAND &amp; ECOLOGY</text>
+  <text x="50" y="105" font-family="Arial, sans-serif" font-size="16" fill="#a9573e" letter-spacing="3">SEASONS AND LIVING SYSTEMS</text>
+</svg>

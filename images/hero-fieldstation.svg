@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Boulder Gardens Fieldstation</title>
+  <desc id="d">Living desert record</desc>
+  <rect width="800" height="520" fill="#f3e5cc"/>
+  <path d="M0 52 C120 16 206 85 328 40 C455 -7 565 60 800 14" fill="none" stroke="#c18b3f" stroke-width="5" opacity=".35"/>
+  <path d="M0 490 C148 452 242 515 401 472 C570 426 656 494 800 452" fill="none" stroke="#a9573e" stroke-width="6" opacity=".35"/>
+  
+          <path d="M0 365 C150 300 270 335 415 286 C545 242 660 285 800 225 L800 520 L0 520Z" fill="#d8bd88"/>
+          <path d="M0 405 C190 335 330 395 500 318 C620 265 700 307 800 277 L800 520 L0 520Z" fill="#b66c48" opacity=".82"/>
+          <g fill="#6b6d51">
+            <path d="M598 233 h14 v133 h-14z"/><path d="M563 267 h49 v13 h-49z"/><path d="M612 300 h43 v13 h-43z"/>
+            <path d="M212 287 h11 v89 h-11z"/><path d="M185 318 h37 v10 h-37z"/>
+          </g>
+          <g fill="#6a5843"><ellipse cx="390" cy="350" rx="94" ry="46"/><ellipse cx="465" cy="330" rx="67" ry="37"/><ellipse cx="322" cy="369" rx="62" ry="31"/></g>
+        
+  <rect x="28" y="27" width="744" height="466" rx="9" fill="none" stroke="#2d332c" stroke-width="3" opacity=".18"/>
+  <text x="48" y="72" font-family="Georgia, serif" font-size="25" fill="#2d332c" letter-spacing="2">BOULDER GARDENS FIELDSTATION</text>
+  <text x="50" y="105" font-family="Arial, sans-serif" font-size="16" fill="#a9573e" letter-spacing="3">LIVING DESERT RECORD</text>
+</svg>

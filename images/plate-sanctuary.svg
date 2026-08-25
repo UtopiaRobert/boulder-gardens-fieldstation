@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">The Sanctuary</title>
+  <desc id="d">Place and people</desc>
+  <rect width="800" height="520" fill="#f3e5cc"/>
+  <path d="M0 52 C120 16 206 85 328 40 C455 -7 565 60 800 14" fill="none" stroke="#c18b3f" stroke-width="5" opacity=".35"/>
+  <path d="M0 490 C148 452 242 515 401 472 C570 426 656 494 800 452" fill="none" stroke="#a9573e" stroke-width="6" opacity=".35"/>
+  
+          <g fill="#6c5943"><ellipse cx="405" cy="355" rx="195" ry="84"/><ellipse cx="265" cy="390" rx="103" ry="50"/><ellipse cx="575" cy="385" rx="116" ry="55"/></g>
+          <path d="M126 416 C250 330 374 458 510 363 C624 283 700 331 782 284" fill="none" stroke="#c18b3f" stroke-width="20"/>
+          <g stroke="#596246" stroke-width="12" stroke-linecap="round">
+            <path d="M153 330v83 M123 362h60 M674 248v148 M634 302h80"/>
+          </g>
+          <circle cx="650" cy="95" r="59" fill="#c18b3f"/>
+        
+  <rect x="28" y="27" width="744" height="466" rx="9" fill="none" stroke="#2d332c" stroke-width="3" opacity=".18"/>
+  <text x="48" y="72" font-family="Georgia, serif" font-size="25" fill="#2d332c" letter-spacing="2">THE SANCTUARY</text>
+  <text x="50" y="105" font-family="Arial, sans-serif" font-size="16" fill="#a9573e" letter-spacing="3">PLACE AND PEOPLE</text>
+</svg>

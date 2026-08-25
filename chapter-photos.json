@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "chapters": {
+    "sanctuary": {
+      "number": "01",
+      "title": "The Sanctuary",
+      "page": "sanctuary.html",
+      "description": "Place, history, spaces and everyday life.",
+      "default_cover": "images/wet-boulder-gardens-hero.jpg",
+      "cover": "images/chapters/covers/sanctuary-teepee.jpg",
+      "photos": []
+    },
+    "people": {
+      "number": "02",
+      "title": "People & Community",
+      "page": "people.html",
+      "description": "Social permaculture, gatherings, shared work and stewardship.",
+      "default_cover": "assets/community-life/social-permaculture-hero.jpg",
+      "cover": "images/chapters/covers/people-community-group.jpg",
+      "photos": []
+    },
+    "land": {
+      "number": "03",
+      "title": "Land & Ecology",
+      "page": "land.html",
+      "description": "Desert ecology, wildlife, geology, weather and seasonal change.",
+      "default_cover": "assets/four-corners-hike/four-corners-hero.jpg",
+      "cover": "images/chapters/covers/land-ecology-boulders.jpg",
+      "photos": []
+    },
+    "water": {
+      "number": "04",
+      "title": "Water",
+      "page": "water.html",
+      "description": "Springs, wells, storage, movement and monitoring.",
+      "default_cover": "images/water/water-run-wide.webp",
+      "cover": "images/chapters/covers/water-after-rain.jpg",
+      "photos": []
+    },
+    "energy": {
+      "number": "05",
+      "title": "Energy",
+      "page": "energy.html",
+      "description": "Solar arrays, batteries, generators and off-grid power.",
+      "default_cover": "images/reports/fr001/hero.jpg",
+      "cover": "images/chapters/covers/energy-solar-panels.jpg",
+      "photos": []
+    },
+    "communications": {
+      "number": "06",
+      "title": "Communications",
+      "page": "communications.html",
+      "description": "Internet, radio, Wi-Fi, fiber, Ethernet and Meshtastic.",
+      "default_cover": "images/reports/fr004/hero.jpg",
+      "cover": "images/chapters/covers/communications-dish-centered.jpg",
+      "photos": []
+    },
+    "sensors": {
+      "number": "07",
+      "title": "Sensors & Data",
+      "page": "sensors.html",
+      "description": "Measurements, instruments, Home Assistant and field data.",
+      "default_cover": "images/field-report-001-jk-bms.jpg",
+      "cover": "images/field-report-001-jk-bms.jpg",
+      "photos": []
+    },
+    "projects": {
+      "number": "08",
+      "title": "Projects",
+      "page": "projects.html",
+      "description": "Experiments, construction, repairs and systems in progress.",
+      "default_cover": "images/reports/fr002/hero.jpg",
+      "cover": "images/chapters/covers/projects-community-work.jpg",
+      "photos": []
+    },
+    "archive": {
+      "number": "09",
+      "title": "Archive",
+      "page": "archive.html",
+      "description": "Workbook, source photographs, maps and revision history.",
+      "default_cover": "images/plate-archive.svg",
+      "cover": "images/plate-archive.svg",
+      "photos": []
+    }
+  }
+}

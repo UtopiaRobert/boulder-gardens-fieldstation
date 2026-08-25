@@ -1,0 +1,207 @@
+
+/* =========================================================
+   BOULDER GARDENS — CHAPTERS FROM THE LAND
+   Deliberately mirrors the Full Circle Paradise journal rhythm.
+   Static website only; independent of the FieldStation app.
+   ========================================================= */
+
+.chapter-index.chapters-from-land {
+  position: relative;
+  max-width: none;
+  margin: 0;
+  padding: clamp(4.5rem, 8vw, 7rem) clamp(1.2rem, 5vw, 5.5rem);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.18), transparent 35%),
+    var(--paper-pale, #f7f1e2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.chapters-from-land .section-heading {
+  max-width: 760px;
+  margin: 0 auto 2.8rem;
+  text-align: center;
+}
+
+.chapters-from-land .section-heading .kicker {
+  margin-bottom: .35rem;
+  color: var(--clay, #a9573e);
+  font-family: "Architects Daughter", "Segoe Print", "Bradley Hand", cursive;
+  font-size: 1.12rem;
+  letter-spacing: .03em;
+  text-transform: none;
+}
+
+.chapters-from-land .section-heading h2 {
+  margin: 0 0 .65rem;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: .95;
+}
+
+.chapters-from-land .section-heading p:last-child {
+  color: var(--muted);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.08rem;
+}
+
+.chapters-from-land .chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 1420px;
+  margin: 0 auto;
+}
+
+.chapters-from-land .chapter-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: .68rem .68rem 1.2rem;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.28), transparent 45%),
+    rgba(250,244,232,.86);
+  border: 1px solid #c4ad82;
+  box-shadow: 0 8px 17px rgba(57,45,25,.09);
+  transform: none;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.chapters-from-land .chapter-card:hover {
+  color: var(--ink);
+  transform: translateY(-5px);
+  box-shadow: 0 14px 26px rgba(57,45,25,.15);
+}
+
+.chapters-from-land .chapter-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin: 0;
+  border: 1px solid rgba(139,112,68,.55);
+  outline: 5px solid rgba(255,255,255,.34);
+  filter: saturate(.88) contrast(.98);
+}
+
+.chapters-from-land .chapter-number {
+  position: static;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: .8rem .65rem .05rem;
+  color: var(--clay);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  font-family: Arial, sans-serif;
+  font-size: .68rem;
+  letter-spacing: .14em;
+}
+
+.chapters-from-land .chapter-card h3 {
+  margin: .25rem .65rem .28rem;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -.01em;
+}
+
+.chapters-from-land .chapter-card p {
+  margin: 0 .65rem;
+  color: var(--muted);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: .93rem;
+  line-height: 1.45;
+}
+
+.chapters-from-land .chapter-action {
+  display: block;
+  margin: auto .65rem 0;
+  padding-top: 1rem;
+  color: var(--clay);
+  font-size: .78rem;
+  font-weight: 800;
+}
+
+.chapters-from-land .chapter-status { display: none; }
+
+/* Chapter hero photographs: keep the homepage cover and chapter hero visually related. */
+.page-hero-image img[data-chapter-cover],
+.chapter-hero img[data-chapter-cover],
+.water-hero-photo img[data-chapter-cover] {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+/* Uploader-managed photo archive on each chapter page */
+.chapter-photo-archive {
+  padding: clamp(4rem, 7vw, 6.5rem) clamp(1.2rem, 5vw, 5.5rem);
+  background: var(--paper-pale, #f7f1e2);
+  border-top: 1px solid var(--line);
+}
+
+.chapter-photo-archive .chapter-photo-heading {
+  max-width: 760px;
+  margin: 0 auto 2.4rem;
+  text-align: center;
+}
+
+.chapter-photo-archive .chapter-photo-heading .kicker {
+  color: var(--clay);
+  font-family: "Architects Daughter", "Segoe Print", "Bradley Hand", cursive;
+  text-transform: none;
+  font-size: 1.08rem;
+}
+
+.chapter-photo-archive .chapter-photo-heading h2 {
+  margin: .25rem 0 .55rem;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  line-height: 1;
+}
+
+.chapter-photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 1.15rem;
+  max-width: 1420px;
+  margin: 0 auto;
+}
+
+.chapter-photo-gallery figure {
+  margin: 0;
+  padding: .55rem .55rem .85rem;
+  background: rgba(250,244,232,.9);
+  border: 1px solid #c4ad82;
+  box-shadow: 0 8px 17px rgba(57,45,25,.08);
+}
+
+.chapter-photo-gallery img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.chapter-photo-gallery figcaption {
+  margin: .55rem .35rem 0;
+  color: var(--muted);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: .9rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 1180px) {
+  .chapters-from-land .chapter-grid,
+  .chapter-photo-gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 560px) {
+  .chapters-from-land .chapter-grid,
+  .chapter-photo-gallery { grid-template-columns: 1fr; }
+}

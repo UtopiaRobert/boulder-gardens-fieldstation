@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#303229">
+  <meta name="description" content="Reusable Boulder Gardens Fieldstation report template.">
+  <title>Field Report Template · Boulder Gardens Fieldstation</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="field-report.css">
+  <script src="site.js" defer></script>
+</head>
+<body class="report-page">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <a class="wordmark" href="index.html" aria-label="Boulder Gardens Fieldstation home">
+    <span>Boulder Gardens</span>
+    <strong>Fieldstation</strong>
+    <small>Sanctuary · Mojave Desert · Living Record</small>
+  </a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+  <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="field-reports.html" class="active" aria-current="page">Field Reports</a><a href="sanctuary.html">Sanctuary</a><a href="people.html">People &amp; Community</a><a href="land.html">Land & Ecology</a><a href="water.html">Water</a><a href="energy.html">Subject</a><a href="communications.html">Communications</a><a href="sensors.html">Sensors & Data</a><a href="projects.html">Projects</a></nav>
+</header>
+
+<main id="main">
+  <div class="report-masthead">
+    <nav class="report-breadcrumb" aria-label="Breadcrumb">
+      <a href="field-reports.html">Field Reports</a>
+      <span>·</span>
+      <a href="energy.html">Subject</a>
+      <span>·</span>
+      <span>FR000</span>
+    </nav>
+  </div>
+
+  <article>
+    <header class="report-hero-v2">
+      <div class="report-hero-copy">
+        <p class="report-series">Field Report 000 · Subject</p>
+        <h1>Report title<br>goes here</h1>
+        <p class="report-deck">
+          One concise sentence that tells a casual reader what was observed.
+        </p>
+        <div class="report-byline">
+          <span>Observation date</span>
+          <span>Observation location</span>
+          <span>Observed by Robert Redecker</span>
+        </div>
+      </div>
+
+      <figure class="report-hero-media torn">
+        <img src="images/reports/fr001/observer-portrait.svg"
+             alt="Reserved space for a future photograph of Robert with the Observation location solar system"
+             data-lightbox>
+        <figcaption>
+          A portrait with the working system will replace this field plate.
+        </figcaption>
+      </figure>
+    </header>
+
+    <section class="report-observation" aria-labelledby="observation-title">
+      <aside class="report-field-card">
+        <h2>Field card</h2>
+        <dl>
+          <dt>Report</dt><dd>FR000</dd>
+          <dt>Location</dt><dd>Observation location</dd>
+          <dt>Array</dt><dd>Key field detail</dd>
+          <dt>Battery</dt><dd>Key field detail</dd>
+          <dt>Observed</dt><dd>Observation time</dd>
+          <dt>Subject</dt><dd>Subject</dd>
+        </dl>
+      </aside>
+
+      <div class="report-copy">
+        <p id="observation-title">
+          Record the observed system configuration here using confirmed equipment labels,
+          direct measurements, and the source record. Keep technical interpretation
+          in the workbook unless it is central to the Field Report.
+        </p>
+
+        <div class="report-readings" aria-label="Observed battery readings">
+          <div><strong>—</strong><span>charge</span></div>
+          <div><strong>—</strong><span>pack voltage</span></div>
+          <div><strong>—</strong><span>in use</span></div>
+        </div>
+
+        <p>
+          At Observation time, the highest cell measured 3.344 volts and the lowest
+          3.342 volts. Balancing was inactive.
+        </p>
+
+        <p>
+          The system runs the Observation location’s computers, lighting, networking
+          equipment, and communications infrastructure. Six panels and sixteen
+          battery cells now form the electrical foundation for much of the work
+          happening at Boulder Gardens.
+        </p>
+      </div>
+    </section>
+
+    <section class="photographic-record" aria-labelledby="photo-record-title">
+      <header class="photographic-record-header">
+        <div>
+          <p class="kicker">Photographic Record</p>
+          <h2 id="photo-record-title">The system, seen in place</h2>
+        </div>
+        <p>
+          These positions establish the reusable Field Report photo sequence:
+          setting, equipment, storage, control hardware, and one instrument reading.
+          The reserved plates will be replaced as the photographs are supplied.
+        </p>
+      </header>
+
+      <div class="photo-journal">
+        <figure class="photo-entry wide">
+          <img src="images/reports/fr001/solar-array.svg"
+               alt="Reserved photograph slot for the six-panel solar array"
+               data-lightbox>
+          <figcaption>
+            <strong>The array</strong>
+            Photovoltaic modules at the Observation location.
+          </figcaption>
+        </figure>
+
+        <figure class="photo-entry tall torn">
+          <img src="images/reports/fr001/electrical-wall.svg"
+               alt="Reserved photograph slot for the inverter and electrical wall"
+               data-lightbox>
+          <figcaption>
+            <strong>Power equipment</strong>
+            Schneider inverter, OutBack charging equipment, breakers, and wiring.
+          </figcaption>
+        </figure>
+
+        <figure class="photo-entry half-left torn">
+          <img src="images/reports/fr001/battery-bank.svg"
+               alt="Reserved photograph slot for the sixteen-cell battery bank"
+               data-lightbox>
+          <figcaption>
+            <strong>Stored energy</strong>
+            The 48-volt LiFePO₄ battery bank assembled from sixteen cells.
+          </figcaption>
+        </figure>
+
+        <figure class="photo-entry half-right">
+          <img src="images/reports/fr001/bms-hardware.svg"
+               alt="Reserved photograph slot for the JK-BMS unit and wiring"
+               data-lightbox>
+          <figcaption>
+            <strong>Battery management</strong>
+            JK-BMS hardware, sensing leads, and nearby protection.
+          </figcaption>
+        </figure>
+
+        <figure class="photo-entry instrument">
+          <img src="images/reports/fr001/jk-bms-reading.jpg"
+               alt="JK-BMS screen showing 79 percent charge and 53.48 volts"
+               data-lightbox>
+          <figcaption>
+            <strong>Instrument reading</strong>
+            At Observation time the battery was at — charge, discharging lightly,
+            with 213.4 amp-hours remaining.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="system-thread" aria-labelledby="thread-title">
+      <p class="kicker">System Thread</p>
+      <h2 id="thread-title">What this power supports</h2>
+      <div class="thread-grid">
+        <a href="communications.html"><span>Communications</span><strong>Meshtastic, radio, fiber, Wi-Fi, and PoE</strong></a>
+        <a href="sensors.html"><span>Sensors & Data</span><strong>Home Assistant, MQTT, ESPHome, and monitoring</strong></a>
+        <a href="projects.html"><span>Projects</span><strong>Water sensing, fire watch, and field infrastructure</strong></a>
+        <a href="archive.html"><span>Archive</span><strong>Workbook record, photographs, and later revisions</strong></a>
+      </div>
+    </section>
+
+    <section class="next-observation" aria-labelledby="next-title">
+      <div>
+        <p class="kicker">Next Observation</p>
+        <h2 id="next-title">A full summer day</h2>
+        <p>
+          How does generation, battery charge, and electrical use change from
+          first light through evening?
+        </p>
+      </div>
+      <div class="next-mark" aria-hidden="true">→</div>
+    </section>
+
+    <p class="report-source-note">
+      Public synopsis derived from Boulder Gardens Fieldstation Workbook source record FR000.
+      Detailed equipment records, calculations, unresolved questions, and corrections remain in the workbook.
+    </p>
+  </article>
+
+  <section class="report-footer-nav">
+    <a href="field-reports.html">← All field reports</a>
+    <a href="energy.html">Part of the Subject record →</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div>
+    <strong>Boulder Gardens Fieldstation</strong>
+    <span>Observations from a living desert sanctuary</span>
+  </div>
+  <div>
+    <span>Mojave Desert · California</span>
+    <span>Workbook first · Field Reports second</span>
+  </div>
+  <a href="archive.html">Open the archive index →</a>
+</footer>
+
+<div class="lightbox" hidden aria-hidden="true">
+  <button type="button" aria-label="Close image">×</button>
+  <img alt="">
+  <p></p>
+</div>
+</body>
+</html>

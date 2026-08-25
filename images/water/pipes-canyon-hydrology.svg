@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="t d">
+<title id="t">Conceptual Pipes Canyon recharge diagram</title>
+<desc id="d">Rain and snow on the San Bernardino Mountains infiltrate alluvium and fractured rock, then move through groundwater toward seeps, riparian vegetation, streamflow, and the Pipes Canyon area. The exact source of the preserve drinking-water outlet remains unconfirmed.</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7f1e2"/><stop offset="1" stop-color="#efe4c8"/></linearGradient>
+  <linearGradient id="earth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7ad7a"/><stop offset="1" stop-color="#9b7654"/></linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#3b7083"/></marker>
+  <style>
+    .title{font:700 34px Georgia,serif;fill:#233018}.label{font:600 23px Georgia,serif;fill:#2d3526}
+    .small{font:18px Arial,sans-serif;fill:#5a624f}.note{font:italic 18px Georgia,serif;fill:#6d604c}
+    .flow{fill:none;stroke:#3b7083;stroke-width:7;stroke-linecap:round;marker-end:url(#arrow)}
+  </style>
+</defs>
+<rect width="1200" height="620" rx="18" fill="url(#sky)"/>
+<text x="48" y="56" class="title">How water can move through Pipes Canyon</text>
+<text x="48" y="90" class="small">Conceptual cross-section · not to scale</text>
+
+<!-- mountains -->
+<path d="M0 330 L120 190 L190 245 L285 135 L390 255 L485 210 L585 345 L0 345 Z" fill="#7c8666"/>
+<path d="M100 208 L120 190 L142 216 L125 210 Z M265 160 L285 135 L310 170 L288 160 Z" fill="#f6f0df"/>
+<path d="M0 345 C250 320 400 360 600 355 C790 350 970 290 1200 310 L1200 620 L0 620 Z" fill="url(#earth)"/>
+<path d="M0 408 C230 382 410 430 610 420 C800 410 1000 350 1200 370" fill="none" stroke="#705740" stroke-width="2" opacity=".55"/>
+<path d="M0 465 C250 440 450 485 670 468 C870 452 1030 405 1200 425" fill="none" stroke="#705740" stroke-width="2" opacity=".45"/>
+
+<!-- rain -->
+<g stroke="#3b7083" stroke-width="4" stroke-linecap="round">
+<path d="M180 120 l-14 25 M220 110 l-14 25 M340 92 l-14 25 M375 112 l-14 25 M420 132 l-14 25"/>
+</g>
+<text x="175" y="74" class="label">Rain &amp; snow</text>
+<text x="90" y="292" class="label">San Bernardino Mountains</text>
+
+<!-- infiltration arrows -->
+<path class="flow" d="M180 250 C180 300 180 340 195 390"/>
+<path class="flow" d="M300 235 C305 290 315 340 330 398"/>
+<path class="flow" d="M425 270 C435 320 450 360 470 405"/>
+<text x="80" y="435" class="label">Infiltration</text>
+<text x="80" y="464" class="small">alluvium + fractured rock</text>
+
+<!-- groundwater -->
+<path d="M195 478 C390 455 555 505 735 472 C900 442 1010 402 1130 410" fill="none" stroke="#3b7083" stroke-width="15" opacity=".20"/>
+<path class="flow" d="M210 478 C390 455 555 505 735 472"/>
+<path class="flow" d="M735 472 C900 442 1010 402 1110 410"/>
+<text x="465" y="535" class="label">Groundwater movement through canyon sediments</text>
+
+<!-- riparian zone -->
+<g fill="#5e7147">
+<path d="M945 335 q-20-70 8-120 q20 55 5 120z"/><path d="M985 345 q-25-90 15-145 q18 70 2 145z"/>
+<path d="M1035 338 q-15-80 22-128 q12 65-5 128z"/><circle cx="1100" cy="290" r="48"/><rect x="1093" y="300" width="14" height="68"/>
+</g>
+<path d="M930 392 C1010 372 1080 380 1160 365" fill="none" stroke="#4d8894" stroke-width="9" stroke-linecap="round"/>
+<text x="865" y="180" class="label">Pipes Canyon riparian corridor</text>
+<text x="865" y="212" class="small">seeps · springs · streamflow · shallow groundwater</text>
+
+<!-- outlet -->
+<path d="M1060 350 h92 v48" fill="none" stroke="#ece8d9" stroke-width="15" stroke-linecap="round"/>
+<path d="M1152 397 q20 18 0 42" fill="none" stroke="#4d8894" stroke-width="10" stroke-linecap="round"/>
+<text x="905" y="505" class="note">The preserve outlet is real; its exact source</text>
+<text x="905" y="531" class="note">(spring, well, or developed seep) still needs confirmation.</text>
+</svg>

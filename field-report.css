@@ -1,0 +1,674 @@
+
+/* Boulder Gardens Field Report template — v0.2 */
+
+.report-page {
+  --report-paper: #f7edda;
+  --report-ink: #303229;
+  --report-clay: #a75f46;
+  --report-ochre: #c39442;
+  --report-olive: #68705a;
+  --report-sage: #8c9988;
+  --report-sky: #6f8e91;
+}
+
+.report-masthead {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.2rem, 5vw, 5.5rem) 0;
+}
+
+.report-breadcrumb {
+  display: flex;
+  gap: .55rem;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font: 600 .68rem/1.2 "Inter", sans-serif;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.report-breadcrumb a {
+  color: var(--clay-dark);
+  text-decoration: none;
+}
+
+.report-hero-v2 {
+  max-width: 1480px;
+  margin: 0 auto;
+  min-height: 690px;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+  padding: clamp(2rem, 5vw, 5rem) clamp(1.2rem, 5vw, 5.5rem) clamp(4.5rem, 8vw, 8rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.report-hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.report-hero-copy::before {
+  content: "001";
+  position: absolute;
+  z-index: -1;
+  left: -.08em;
+  top: -.56em;
+  color: rgba(195,148,66,.13);
+  font: 400 clamp(8rem, 18vw, 17rem)/1 "EB Garamond", Georgia, serif;
+}
+
+.report-series {
+  margin: 0 0 1rem;
+  color: var(--report-clay);
+  font: 700 .72rem/1.2 "Inter", sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.report-hero-copy h1 {
+  margin: 0 0 1.2rem;
+  font: 400 clamp(4.2rem, 8vw, 8.3rem)/.87 "Architects Daughter", cursive;
+  letter-spacing: -.045em;
+}
+
+.report-deck {
+  max-width: 620px;
+  margin: 0 0 1.5rem;
+  color: var(--ink);
+  font: 400 clamp(1.25rem, 2.3vw, 1.72rem)/1.4 "EB Garamond", Georgia, serif;
+}
+
+.report-byline {
+  display: flex;
+  gap: .8rem 1.5rem;
+  flex-wrap: wrap;
+  color: var(--olive);
+  font: 700 .7rem/1.3 "Inter", sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.report-hero-media {
+  margin: 0;
+  position: relative;
+}
+
+.report-hero-media img {
+  width: 100%;
+  min-height: 570px;
+  max-height: 720px;
+  object-fit: cover;
+}
+
+.report-hero-media::after {
+  content: "hero photograph";
+  position: absolute;
+  right: -1.1rem;
+  top: 1.5rem;
+  padding: .42rem .72rem;
+  background: rgba(247,237,218,.94);
+  color: var(--report-clay);
+  transform: rotate(2deg);
+  box-shadow: 0 6px 18px rgba(48,50,41,.14);
+  font: 700 .64rem/1.2 "Inter", sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.report-hero-media figcaption {
+  margin: .75rem .35rem 0;
+  color: var(--muted);
+  font-size: .76rem;
+}
+
+.report-observation {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(4.5rem, 8vw, 8rem) clamp(1.2rem, 5vw, 4.5rem);
+  display: grid;
+  grid-template-columns: 220px minmax(0, 760px);
+  gap: clamp(2rem, 6vw, 6rem);
+  justify-content: center;
+}
+
+.report-field-card {
+  align-self: start;
+  padding: 1.5rem 1.35rem 1.65rem;
+  border: 1px solid var(--line);
+  background: rgba(251,244,230,.66);
+  box-shadow: 7px 7px 0 rgba(111,142,145,.12);
+}
+
+.report-field-card h2 {
+  margin: 0 0 1rem;
+  color: var(--clay);
+  font: 400 1.25rem/1.1 "Architects Daughter", cursive;
+}
+
+.report-field-card dl {
+  margin: 0;
+}
+
+.report-field-card dt {
+  margin-top: .9rem;
+  color: var(--clay);
+  font: 700 .62rem/1.2 "Inter", sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.report-field-card dd {
+  margin: .15rem 0 0;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.05rem;
+}
+
+.report-copy > p {
+  margin: 0 0 1.8rem;
+  font: 400 clamp(1.28rem, 2.1vw, 1.68rem)/1.62 "EB Garamond", Georgia, serif;
+}
+
+.report-copy > p:first-child::first-letter {
+  float: left;
+  margin: .12rem .45rem 0 0;
+  color: var(--clay);
+  font: 400 4.3rem/.76 "Architects Daughter", cursive;
+}
+
+.report-readings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2.7rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(251,244,230,.37);
+}
+
+.report-readings div {
+  padding: 1.45rem 1rem;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+
+.report-readings div:last-child {
+  border-right: 0;
+}
+
+.report-readings strong {
+  display: block;
+  color: var(--olive);
+  font: 500 clamp(1.8rem, 4vw, 3rem)/1 "EB Garamond", Georgia, serif;
+}
+
+.report-readings span {
+  color: var(--clay);
+  font: 700 .62rem/1.2 "Inter", sans-serif;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.photographic-record {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: clamp(4.5rem, 8vw, 8rem) clamp(1.2rem, 5vw, 5.5rem);
+  border-top: 1px solid var(--line);
+}
+
+.photographic-record-header {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(280px, 1.2fr);
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 3rem;
+}
+
+.photographic-record-header h2 {
+  margin: 0;
+  font: 400 clamp(2.8rem, 6vw, 5.5rem)/.95 "Architects Daughter", cursive;
+}
+
+.photographic-record-header p {
+  max-width: 650px;
+  margin: 0;
+  font: 400 1.14rem/1.5 "EB Garamond", Georgia, serif;
+}
+
+.photo-journal {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1rem, 2.2vw, 2rem);
+  align-items: start;
+}
+
+.photo-entry {
+  margin: 0;
+  position: relative;
+}
+
+.photo-entry img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in;
+  background: var(--sand);
+  box-shadow: 0 20px 45px var(--paper-shadow);
+}
+
+.photo-entry figcaption {
+  padding: .8rem .25rem 0;
+  color: var(--muted);
+  font: 400 .78rem/1.45 "Inter", sans-serif;
+}
+
+.photo-entry figcaption strong {
+  display: block;
+  color: var(--clay-dark);
+  font: 400 1.22rem/1.15 "Architects Daughter", cursive;
+  margin-bottom: .2rem;
+}
+
+.photo-entry.wide {
+  grid-column: 1 / 9;
+}
+
+.photo-entry.tall {
+  grid-column: 9 / -1;
+  transform: rotate(.7deg);
+}
+
+.photo-entry.half-left {
+  grid-column: 1 / 7;
+  transform: rotate(-.5deg);
+}
+
+.photo-entry.half-right {
+  grid-column: 7 / -1;
+  transform: rotate(.5deg);
+}
+
+.photo-entry.full {
+  grid-column: 2 / 12;
+}
+
+.photo-entry.instrument {
+  grid-column: 4 / 10;
+  padding: clamp(1rem, 2vw, 1.6rem);
+  background: rgba(251,244,230,.74);
+  border: 1px solid var(--line);
+  transform: rotate(-.35deg);
+}
+
+.photo-entry.instrument img {
+  max-height: 680px;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+.system-thread {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: clamp(4.5rem, 8vw, 8rem) clamp(1.2rem, 5vw, 5.5rem);
+}
+
+.system-thread h2,
+.next-observation h2 {
+  margin: 0 0 1.7rem;
+  font: 400 clamp(2.4rem, 5vw, 4.6rem)/.95 "Architects Daughter", cursive;
+}
+
+.thread-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-left: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+}
+
+.thread-grid a {
+  min-height: 180px;
+  padding: 1.35rem;
+  color: inherit;
+  text-decoration: none;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(251,244,230,.45);
+}
+
+.thread-grid a:hover {
+  background: rgba(195,148,66,.12);
+}
+
+.thread-grid span {
+  display: block;
+  color: var(--clay);
+  font: 700 .61rem/1.2 "Inter", sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.thread-grid strong {
+  display: block;
+  margin-top: .65rem;
+  font: 400 1.55rem/1.08 "EB Garamond", Georgia, serif;
+}
+
+.next-observation {
+  max-width: 1180px;
+  margin: 0 auto clamp(4rem, 8vw, 8rem);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  background: var(--olive);
+  color: white;
+  box-shadow: 10px 10px 0 rgba(167,95,70,.20);
+}
+
+.next-observation .kicker {
+  color: var(--sand);
+}
+
+.next-observation h2 {
+  color: white;
+  margin-bottom: .7rem;
+}
+
+.next-observation p {
+  margin: 0;
+  max-width: 680px;
+  color: rgba(255,255,255,.78);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.next-observation .next-mark {
+  color: var(--sand);
+  font: 400 clamp(4rem, 8vw, 7rem)/1 "Architects Daughter", cursive;
+}
+
+.report-source-note {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 1rem 1.25rem;
+  color: var(--muted);
+  border-left: 3px solid var(--sky);
+  font-size: .78rem;
+  background: rgba(111,142,145,.08);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
+  gap: .8rem;
+  padding: 1rem;
+  background: rgba(22,24,20,.94);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox button {
+  justify-self: end;
+  color: white;
+  background: transparent;
+  border: 0;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+.lightbox img {
+  max-width: min(96vw, 1500px);
+  max-height: 82vh;
+  object-fit: contain;
+}
+
+.lightbox p {
+  margin: 0;
+  color: rgba(255,255,255,.8);
+  text-align: center;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 950px) {
+  .report-hero-v2 {
+    grid-template-columns: 1fr;
+  }
+
+  .report-hero-media img {
+    min-height: 0;
+    max-height: 680px;
+  }
+
+  .report-observation {
+    grid-template-columns: 1fr;
+  }
+
+  .report-field-card {
+    max-width: 640px;
+  }
+
+  .photographic-record-header {
+    grid-template-columns: 1fr;
+  }
+
+  .thread-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .next-observation {
+    grid-template-columns: 1fr;
+  }
+
+  .next-observation .next-mark {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .report-hero-copy h1 {
+    font-size: clamp(3.7rem, 18vw, 5.5rem);
+  }
+
+  .report-hero-media::after {
+    right: .5rem;
+  }
+
+  .report-readings {
+    grid-template-columns: 1fr;
+  }
+
+  .report-readings div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .report-readings div:last-child {
+    border-bottom: 0;
+  }
+
+  .photo-journal {
+    display: block;
+  }
+
+  .photo-entry,
+  .photo-entry.wide,
+  .photo-entry.tall,
+  .photo-entry.half-left,
+  .photo-entry.half-right,
+  .photo-entry.full,
+  .photo-entry.instrument {
+    margin-bottom: 2.3rem;
+    transform: none;
+  }
+
+  .thread-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FR001 populated photography */
+.report-hero-media img {
+  object-position: center 30%;
+}
+
+/* FIELDSTATION-REPORT-FULL-CIRCLE-HARMONY-0.5.4:START */
+
+.report-hero-copy h1 {
+  max-width: 10ch;
+  margin: .12rem 0 .4rem;
+  color: var(--green-deep, #24391f);
+  font-family: var(--serif);
+  font-size: clamp(4.1rem, 7.2vw, 6.8rem);
+  font-weight: 600;
+  line-height: .76;
+  letter-spacing: -.05em;
+}
+.report-deck {
+  max-width: 38em;
+  color: #51574e;
+  font-family: var(--hand);
+  font-size: clamp(1.15rem, 1.85vw, 1.42rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.report-breadcrumbs,
+.report-meta {
+  color: #777365;
+  font-family: var(--ui);
+  font-size: .69rem;
+  font-weight: 600;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.report-field-card {
+  border: 1px solid rgba(128,105,59,.28);
+  border-radius: 0;
+  background: rgba(249,243,225,.86);
+  box-shadow: 0 11px 27px rgba(58,48,29,.08);
+}
+.report-field-card h2 {
+  color: var(--green-deep, #24391f);
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-style: italic;
+  font-weight: 600;
+}
+.report-field-card dt {
+  color: #7c765f;
+  font-family: var(--ui);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.report-field-card dd {
+  color: #33382f;
+  font-family: var(--serif);
+  font-size: 1.06rem;
+}
+
+.report-copy {
+  color: #353a33;
+  font-family: var(--serif);
+  font-size: 1.09rem;
+  line-height: 1.73;
+}
+.report-copy > p:first-child {
+  color: #30372f;
+  font-size: 1.19rem;
+}
+
+.report-readings > div {
+  border: 1px solid rgba(128,105,59,.20);
+  border-radius: 0;
+  background: rgba(249,243,225,.74);
+  box-shadow: 0 8px 18px rgba(58,48,29,.055);
+}
+.report-readings strong {
+  color: var(--green-deep, #24391f);
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.report-readings span {
+  color: #777365;
+  font-family: var(--ui);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .085em;
+  text-transform: uppercase;
+}
+
+.photographic-record-header h2,
+.system-thread h2,
+.next-observation h2 {
+  color: var(--green-deep, #24391f);
+  font-family: var(--serif);
+  font-size: clamp(2.7rem, 5vw, 4.1rem);
+  font-weight: 600;
+  line-height: .88;
+}
+.photo-entry {
+  padding: .48rem;
+  border: 1px solid rgba(128,105,59,.24);
+  border-radius: 0;
+  background: rgba(249,243,225,.82);
+  box-shadow: 0 10px 24px rgba(58,48,29,.07);
+}
+.photo-entry figcaption {
+  color: #656456;
+  font-family: var(--hand);
+  font-size: 1rem;
+  line-height: 1.18;
+}
+.photo-entry figcaption strong {
+  display: block;
+  margin-bottom: .05rem;
+  color: var(--green-deep, #24391f);
+  font-family: var(--serif);
+  font-size: 1.16rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.thread-grid a {
+  border: 1px solid rgba(128,105,59,.20);
+  border-radius: 0;
+  background: rgba(249,243,225,.68);
+}
+.thread-grid a span {
+  color: var(--green-deep, #24391f);
+  font-family: var(--serif);
+  font-size: 1.16rem;
+  font-weight: 600;
+}
+.thread-grid a small {
+  color: #716f62;
+  font-family: var(--hand);
+  font-size: .95rem;
+  line-height: 1.08;
+}
+.report-source-note {
+  color: #797568;
+  font-family: var(--hand);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 760px) {
+  .report-hero-copy h1 { font-size: clamp(3.8rem, 16vw, 5.6rem); }
+  .report-copy { font-size: 1.05rem; }
+}
+
+/* FIELDSTATION-REPORT-FULL-CIRCLE-HARMONY-0.5.4:END */

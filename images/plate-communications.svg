@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Communications</title>
+  <desc id="d">Radio, fiber, mesh</desc>
+  <rect width="800" height="520" fill="#f3e5cc"/>
+  <path d="M0 52 C120 16 206 85 328 40 C455 -7 565 60 800 14" fill="none" stroke="#c18b3f" stroke-width="5" opacity=".35"/>
+  <path d="M0 490 C148 452 242 515 401 472 C570 426 656 494 800 452" fill="none" stroke="#a9573e" stroke-width="6" opacity=".35"/>
+  
+          <path d="M403 405 V230" stroke="#596246" stroke-width="18" stroke-linecap="round"/>
+          <circle cx="403" cy="218" r="18" fill="#a9573e"/>
+          <path d="M354 268 C300 216 300 132 354 80 M452 268 C506 216 506 132 452 80" fill="none" stroke="#718f8b" stroke-width="15" stroke-linecap="round"/>
+          <path d="M310 309 C222 221 222 83 310 16 M496 309 C584 221 584 83 496 16" fill="none" stroke="#c18b3f" stroke-width="12" stroke-linecap="round"/>
+          <g fill="#6a5843"><ellipse cx="290" cy="420" rx="110" ry="49"/><ellipse cx="503" cy="425" rx="128" ry="55"/></g>
+        
+  <rect x="28" y="27" width="744" height="466" rx="9" fill="none" stroke="#2d332c" stroke-width="3" opacity=".18"/>
+  <text x="48" y="72" font-family="Georgia, serif" font-size="25" fill="#2d332c" letter-spacing="2">COMMUNICATIONS</text>
+  <text x="50" y="105" font-family="Arial, sans-serif" font-size="16" fill="#a9573e" letter-spacing="3">RADIO, FIBER, MESH</text>
+</svg>

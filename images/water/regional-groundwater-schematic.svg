@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 760" role="img" aria-labelledby="t d">
+<title id="t">Schematic map of Rimrock, Pioneertown, Pipes Canyon, and Ames Valley groundwater setting</title>
+<desc id="d">A simplified locator map showing the San Bernardino Mountains, Rimrock area, Pioneertown, Pioneertown Mountains Preserve, Pipes Canyon, Pipes Wash, Ames Valley Groundwater Basin, Landers, and direction toward Emerson Dry Lake. Basin shapes and positions are schematic and not parcel-scale.</desc>
+<defs>
+<style>
+.title{font:700 34px Georgia,serif;fill:#233018}.sub{font:18px Arial,sans-serif;fill:#5a624f}.place{font:700 22px Georgia,serif;fill:#2d3526}
+.small{font:17px Arial,sans-serif;fill:#5a624f}.basin{font:700 25px Georgia,serif;fill:#526345}.note{font:italic 16px Georgia,serif;fill:#6c614f}
+</style>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#4d8894"/></marker>
+</defs>
+<rect width="1100" height="760" rx="18" fill="#f7f1e2"/>
+<text x="48" y="58" class="title">Groundwater setting around Rimrock &amp; Pioneertown</text>
+<text x="48" y="89" class="sub">Schematic locator — useful for orientation, not for assigning a parcel or private well to a basin.</text>
+
+<!-- Mountains -->
+<path d="M40 170 C120 85 210 95 280 150 C360 90 450 108 515 175 C470 250 420 330 370 430 C255 390 150 350 60 300 Z" fill="#7a8465" opacity=".78"/>
+<text x="92" y="135" class="basin">San Bernardino Mountains</text>
+
+<!-- Ames basin -->
+<path d="M390 305 C520 235 780 215 1015 320 C1035 455 955 625 740 670 C570 640 435 555 375 430 Z" fill="#dbe0c7" stroke="#66794f" stroke-width="4" stroke-dasharray="12 8"/>
+<text x="690" y="575" class="basin" text-anchor="middle">Ames Valley Groundwater Basin · DWR 7-16</text>
+<text x="690" y="606" class="small" text-anchor="middle">110,000 acres · groundwater generally moves east / northeast</text>
+
+<!-- Pipes Canyon small basin -->
+<path d="M275 245 C325 205 398 205 440 250 C445 310 414 360 352 382 C300 355 266 310 275 245 Z" fill="#c9ddd7" stroke="#3f7780" stroke-width="4"/>
+<text x="355" y="275" class="small" text-anchor="middle">Pipes Canyon</text>
+<text x="355" y="298" class="small" text-anchor="middle">Fault Valley Basin</text>
+<text x="355" y="321" class="small" text-anchor="middle">DWR 7-49</text>
+
+<!-- Preserve -->
+<path d="M220 188 C330 152 460 180 500 250 C470 305 420 352 350 390 C280 360 225 310 195 250 Z" fill="none" stroke="#45643b" stroke-width="5"/>
+<text x="300" y="205" class="place">Pioneertown Mountains Preserve</text>
+
+<!-- Pipes Wash -->
+<path d="M420 360 C525 398 635 395 735 420 C820 440 885 482 940 520" fill="none" stroke="#4d8894" stroke-width="8" stroke-linecap="round" marker-end="url(#arr)"/>
+<text x="575" y="385" class="small">Pipes Wash / regional drainage</text>
+
+<!-- locations -->
+<g>
+  <circle cx="280" cy="360" r="9" fill="#9b6648"/><text x="208" y="402" class="place">Rimrock area</text>
+  <text x="208" y="426" class="small">Boulder Gardens well: exact location needed</text>
+
+  <circle cx="410" cy="395" r="9" fill="#9b6648"/><text x="430" y="406" class="place">Pioneertown</text>
+
+  <circle cx="333" cy="334" r="9" fill="#3f7780"/><text x="195" y="350" class="small">Preserve visitor area / water outlet (approx.)</text>
+
+  <circle cx="810" cy="390" r="9" fill="#9b6648"/><text x="830" y="399" class="place">Landers</text>
+
+  <ellipse cx="955" cy="575" rx="68" ry="30" fill="#d6d0bd" stroke="#9c9279" stroke-width="2"/>
+  <text x="955" y="580" class="small" text-anchor="middle">Emerson Dry Lake</text>
+</g>
+
+<!-- N arrow -->
+<g transform="translate(70 610)">
+<path d="M0 70 L0 0" stroke="#2d3526" stroke-width="4"/><path d="M0 0 L-10 22 L10 22 Z" fill="#2d3526"/>
+<text x="0" y="-12" class="place" text-anchor="middle">N</text>
+</g>
+
+<text x="48" y="714" class="note">Boundary note: an older 1972 USGS report used Pioneertown, Pipes, and Reche “subbasins” under a different basin scheme. Current DWR Bulletin 118 mapping uses the basin names shown here.</text>
+</svg>

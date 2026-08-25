@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Sensors &amp; Data</title>
+  <desc id="d">Measurement and memory</desc>
+  <rect width="800" height="520" fill="#f3e5cc"/>
+  <path d="M0 52 C120 16 206 85 328 40 C455 -7 565 60 800 14" fill="none" stroke="#c18b3f" stroke-width="5" opacity=".35"/>
+  <path d="M0 490 C148 452 242 515 401 472 C570 426 656 494 800 452" fill="none" stroke="#a9573e" stroke-width="6" opacity=".35"/>
+  
+          <rect x="215" y="105" width="370" height="300" rx="34" fill="#596246"/>
+          <circle cx="310" cy="205" r="48" fill="#f3e5cc"/>
+          <circle cx="490" cy="205" r="48" fill="#c18b3f"/>
+          <rect x="275" y="300" width="250" height="42" rx="21" fill="#718f8b"/>
+          <g stroke="#a9573e" stroke-width="12" stroke-linecap="round">
+            <path d="M215 175h-70 M215 255h-95 M215 335h-70 M585 175h70 M585 255h95 M585 335h70"/>
+          </g>
+        
+  <rect x="28" y="27" width="744" height="466" rx="9" fill="none" stroke="#2d332c" stroke-width="3" opacity=".18"/>
+  <text x="48" y="72" font-family="Georgia, serif" font-size="25" fill="#2d332c" letter-spacing="2">SENSORS &amp; DATA</text>
+  <text x="50" y="105" font-family="Arial, sans-serif" font-size="16" fill="#a9573e" letter-spacing="3">MEASUREMENT AND MEMORY</text>
+</svg>

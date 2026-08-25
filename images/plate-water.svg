@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Water</title>
+  <desc id="d">Storage, movement, use</desc>
+  <rect width="800" height="520" fill="#f3e5cc"/>
+  <path d="M0 52 C120 16 206 85 328 40 C455 -7 565 60 800 14" fill="none" stroke="#c18b3f" stroke-width="5" opacity=".35"/>
+  <path d="M0 490 C148 452 242 515 401 472 C570 426 656 494 800 452" fill="none" stroke="#a9573e" stroke-width="6" opacity=".35"/>
+  
+          <path d="M405 92 C405 92 248 272 248 357 C248 445 319 486 405 486 C491 486 562 445 562 357 C562 272 405 92 405 92Z" fill="#718f8b"/>
+          <path d="M302 354 C357 313 444 313 507 353" fill="none" stroke="#f3e5cc" stroke-width="14" stroke-linecap="round"/>
+          <path d="M316 395 C366 366 445 366 494 396" fill="none" stroke="#f3e5cc" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+        
+  <rect x="28" y="27" width="744" height="466" rx="9" fill="none" stroke="#2d332c" stroke-width="3" opacity=".18"/>
+  <text x="48" y="72" font-family="Georgia, serif" font-size="25" fill="#2d332c" letter-spacing="2">WATER</text>
+  <text x="50" y="105" font-family="Arial, sans-serif" font-size="16" fill="#a9573e" letter-spacing="3">STORAGE, MOVEMENT, USE</text>
+</svg>

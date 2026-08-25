@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Energy</title>
+  <desc id="d">Solar and stored power</desc>
+  <rect width="800" height="520" fill="#f3e5cc"/>
+  <path d="M0 52 C120 16 206 85 328 40 C455 -7 565 60 800 14" fill="none" stroke="#c18b3f" stroke-width="5" opacity=".35"/>
+  <path d="M0 490 C148 452 242 515 401 472 C570 426 656 494 800 452" fill="none" stroke="#a9573e" stroke-width="6" opacity=".35"/>
+  
+          <circle cx="594" cy="150" r="66" fill="#c18b3f"/>
+          <g stroke="#c18b3f" stroke-width="12" stroke-linecap="round">
+            <path d="M594 48v-36 M594 288v-36 M492 150h-36 M732 150h-36 M522 78l-27-27 M693 249l-27-27 M666 78l27-27 M495 249l27-27"/>
+          </g>
+          <g transform="translate(120 214)">
+            <polygon points="0,100 430,40 520,260 90,320" fill="#31453f" stroke="#f3e5cc" stroke-width="7"/>
+            <path d="M72 90 L155 303 M162 76 L245 290 M252 63 L335 277 M342 51 L425 265 M45 166 L475 106 M68 244 L499 184" stroke="#718f8b" stroke-width="7"/>
+            <path d="M252 292 v70 M385 273 v68" stroke="#596246" stroke-width="15"/>
+          </g>
+        
+  <rect x="28" y="27" width="744" height="466" rx="9" fill="none" stroke="#2d332c" stroke-width="3" opacity=".18"/>
+  <text x="48" y="72" font-family="Georgia, serif" font-size="25" fill="#2d332c" letter-spacing="2">ENERGY</text>
+  <text x="50" y="105" font-family="Arial, sans-serif" font-size="16" fill="#a9573e" letter-spacing="3">SOLAR AND STORED POWER</text>
+</svg>

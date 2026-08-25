@@ -1,0 +1,240 @@
+/* =========================================================
+   CHAPTER BANNERS
+   Wide on desktop, taller on phones.
+   Uses the same source photo as the homepage Chapter Cover Photo.
+   ========================================================= */
+
+.page-hero,
+.chapter-hero,
+.water-hero {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: clamp(1.3rem, 3vw, 2.5rem) !important;
+  align-items: start !important;
+}
+
+.page-hero-copy,
+.chapter-hero > div:first-child,
+.water-hero-copy {
+  width: min(100%, 980px);
+  margin-inline: auto;
+}
+
+.page-hero-image,
+.chapter-hero figure,
+.water-hero-photo {
+  width: min(100%, 1500px) !important;
+  max-width: 1500px !important;
+  margin: 0 auto !important;
+}
+
+.page-hero-image img[data-chapter-cover],
+.chapter-hero img[data-chapter-cover],
+.water-hero-photo img[data-chapter-cover] {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 7 !important;
+  object-fit: cover !important;
+  object-position: center center;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 38px rgba(41, 35, 25, .14);
+}
+
+.page-hero-image figcaption,
+.chapter-hero figure figcaption,
+.water-hero-photo figcaption {
+  width: min(100%, 1050px);
+  margin: .72rem auto 0;
+  padding-inline: .35rem;
+  color: var(--muted, #6f685d);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+/* Individual focal-point tuning */
+img[data-chapter-cover="sanctuary"]      { object-position: 50% 52% !important; }
+img[data-chapter-cover="people"]         { object-position: 50% 42% !important; }
+img[data-chapter-cover="land"]           { object-position: 50% 48% !important; }
+img[data-chapter-cover="water"]          { object-position: 50% 48% !important; }
+img[data-chapter-cover="energy"]         { object-position: 50% 55% !important; }
+img[data-chapter-cover="communications"] { object-position: 50% 50% !important; }
+img[data-chapter-cover="sensors"]        { object-position: 50% 50% !important; }
+img[data-chapter-cover="projects"]       { object-position: 50% 48% !important; }
+img[data-chapter-cover="archive"]        { object-position: 50% 50% !important; }
+
+/* People & Community — Permaculture Background */
+.permaculture-background {
+  position: relative;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.1rem, 5vw, 5rem);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.22), transparent 42%),
+    var(--paper-pale, #f7f1e2);
+  border-top: 1px solid var(--line, #c9b996);
+  border-bottom: 1px solid var(--line, #c9b996);
+}
+
+.permaculture-background-inner {
+  display: grid;
+  grid-template-columns: minmax(260px, .82fr) minmax(320px, 1.18fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  max-width: 1240px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.permaculture-portrait {
+  margin: 0;
+  transform: rotate(-1deg);
+}
+
+.permaculture-portrait img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 22%;
+  border: 9px solid rgba(255,255,255,.72);
+  box-shadow: 0 16px 34px rgba(49,39,26,.18);
+}
+
+.permaculture-portrait figcaption,
+.permaculture-certificate figcaption {
+  margin-top: .65rem;
+  color: var(--muted, #6f685d);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: .92rem;
+  line-height: 1.4;
+}
+
+.permaculture-copy .kicker {
+  color: var(--clay, #a9573e);
+  font-family: "Architects Daughter", "Segoe Print", cursive;
+  font-size: 1.05rem;
+}
+
+.permaculture-copy h2 {
+  margin: .2rem 0 1rem;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(2.35rem, 5vw, 4.4rem);
+  font-weight: 500;
+  line-height: .96;
+}
+
+.permaculture-copy p {
+  max-width: 740px;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.62;
+}
+
+.permaculture-copy strong {
+  color: var(--ink, #303229);
+}
+
+.permaculture-certificate {
+  width: min(100%, 760px);
+  margin: 2rem 0 0;
+  padding: .7rem;
+  background: rgba(255,255,255,.55);
+  border: 1px solid var(--line, #c9b996);
+  box-shadow: 0 10px 24px rgba(49,39,26,.10);
+}
+
+.permaculture-certificate a {
+  display: block;
+}
+
+.permaculture-certificate img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.permaculture-note {
+  display: inline-block;
+  margin-top: 1.15rem;
+  padding: .65rem .9rem;
+  background: rgba(169,87,62,.08);
+  border-left: 3px solid var(--clay, #a9573e);
+  font-size: .96rem !important;
+}
+
+@media (max-width: 760px) {
+  .page-hero-image img[data-chapter-cover],
+  .chapter-hero img[data-chapter-cover],
+  .water-hero-photo img[data-chapter-cover] {
+    aspect-ratio: 4 / 3 !important;
+    border-radius: 12px;
+  }
+
+  .permaculture-background-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .permaculture-portrait {
+    width: min(88%, 440px);
+    margin-inline: auto;
+  }
+
+  .permaculture-copy h2 {
+    font-size: clamp(2.3rem, 12vw, 3.35rem);
+  }
+
+  .permaculture-certificate {
+    margin-inline: auto;
+  }
+}
+
+/* =========================================================
+   CHAPTER BANNER HEADROOM REFINEMENT
+   Added to preserve more vertical content as windows narrow.
+   ========================================================= */
+
+/* Large desktop: retain the cinematic feel, but slightly less extreme. */
+@media (min-width: 1200px) {
+  .page-hero-image img[data-chapter-cover],
+  .chapter-hero img[data-chapter-cover],
+  .water-hero-photo img[data-chapter-cover] {
+    aspect-ratio: 16 / 7.5 !important;
+  }
+}
+
+/* Laptop / medium-width browser: become taller sooner.
+   This is the range that was cutting off the tops of subjects. */
+@media (min-width: 761px) and (max-width: 1199px) {
+  .page-hero-image img[data-chapter-cover],
+  .chapter-hero img[data-chapter-cover],
+  .water-hero-photo img[data-chapter-cover] {
+    aspect-ratio: 16 / 9 !important;
+  }
+}
+
+/* Phone / narrow browser: retain substantially more of the original photograph. */
+@media (max-width: 760px) {
+  .page-hero-image img[data-chapter-cover],
+  .chapter-hero img[data-chapter-cover],
+  .water-hero-photo img[data-chapter-cover] {
+    aspect-ratio: 4 / 3 !important;
+  }
+}
+
+/* Focal-point protection.
+   Lower Y percentages keep more of the TOP of the original image visible. */
+img[data-chapter-cover="sanctuary"] {
+  object-position: 50% 32% !important;
+}
+
+img[data-chapter-cover="land"] {
+  object-position: 50% 38% !important;
+}
+
+/* People also benefits from keeping heads comfortably inside the crop. */
+img[data-chapter-cover="people"] {
+  object-position: 50% 38% !important;
+}
+
+/* Communications dish/radio remains centered. */
+img[data-chapter-cover="communications"] {
+  object-position: 50% 46% !important;
+}
