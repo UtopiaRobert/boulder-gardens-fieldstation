@@ -238,3 +238,151 @@ img[data-chapter-cover="people"] {
 img[data-chapter-cover="communications"] {
   object-position: 50% 46% !important;
 }
+
+/* LOWER-LEFT FIELD-NOTE CAPTION — BEGIN */
+
+figure.chapter-cover-frame > figcaption {
+  position: absolute;
+  z-index: 4;
+  left: clamp(.8rem, 2vw, 1.35rem);
+  right: auto;
+  top: auto;
+  bottom: clamp(.8rem, 2vw, 1.35rem);
+
+  width: fit-content;
+  max-width: min(68%, 44rem);
+  min-height: 0;
+  margin: 0;
+  padding: .38rem .75rem .42rem;
+
+  color: var(--ink);
+  background: rgba(251, 244, 230, .92);
+  border: 0;
+  border-left: 3px solid var(--clay);
+  border-radius: 0;
+
+  font-family: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: left;
+
+  box-shadow: 0 7px 16px rgba(60, 43, 25, .15);
+  backdrop-filter: blur(3px);
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  figure.chapter-cover-frame > figcaption {
+    left: .65rem;
+    bottom: .65rem;
+    max-width: calc(100% - 1.3rem);
+    padding: .3rem .55rem .35rem;
+    font-size: .88rem;
+  }
+}
+
+/* LOWER-LEFT FIELD-NOTE CAPTION — END */
+
+/* UNIFIED SQUARE HERO PHOTOGRAPHS — BEGIN */
+
+/* Straight rectangular frame on every chapter hero */
+figure.page-hero-image.chapter-cover-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(48, 50, 41, .16);
+  border-radius: 0 !important;
+  clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+}
+
+/* Remove torn or irregular decorative edges */
+figure.page-hero-image.chapter-cover-frame::before {
+  display: none !important;
+}
+
+/* Keep the photograph itself completely square */
+figure.page-hero-image.chapter-cover-frame > img {
+  display: block;
+  width: 100%;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+}
+
+/* Soft field-journal fade along the bottom */
+figure.page-hero-image.chapter-cover-frame::after {
+  content: "";
+  display: block !important;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(4.5rem, 19%, 8.5rem);
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(251, 244, 230, 0) 0%,
+    rgba(251, 244, 230, .08) 25%,
+    rgba(251, 244, 230, .38) 65%,
+    rgba(251, 244, 230, .88) 100%
+  );
+}
+
+/* Keep the field-note caption above the fade */
+figure.page-hero-image.chapter-cover-frame > figcaption {
+  z-index: 4;
+}
+
+/* UNIFIED SQUARE HERO PHOTOGRAPHS — END */
+
+/* UNIFIED HERO PAPER MAT — BEGIN */
+
+figure.page-hero-image.chapter-cover-frame {
+  --hero-mat: .6rem;
+
+  padding: var(--hero-mat) !important;
+  background: var(--paper-pale) !important;
+  border: 1px solid rgba(48, 50, 41, .16) !important;
+  border-radius: 0 !important;
+
+  filter: none !important;
+  box-shadow:
+    0 14px 30px rgba(70, 50, 28, .14),
+    0 2px 5px rgba(70, 50, 28, .08);
+}
+
+figure.page-hero-image.chapter-cover-frame > img {
+  display: block;
+  width: 100%;
+  border-radius: 0 !important;
+}
+
+/* Keep the fade within the photograph, not over the paper mat */
+figure.page-hero-image.chapter-cover-frame::after {
+  left: var(--hero-mat);
+  right: var(--hero-mat);
+  bottom: var(--hero-mat);
+}
+
+/* Keep the caption inside the photograph */
+figure.page-hero-image.chapter-cover-frame > figcaption {
+  left: calc(var(--hero-mat) + clamp(.7rem, 1.5vw, 1rem));
+  bottom: calc(var(--hero-mat) + clamp(.7rem, 1.5vw, 1rem));
+}
+
+@media (max-width: 640px) {
+  figure.page-hero-image.chapter-cover-frame {
+    --hero-mat: .42rem;
+  }
+
+  figure.page-hero-image.chapter-cover-frame > figcaption {
+    left: calc(var(--hero-mat) + .5rem);
+    bottom: calc(var(--hero-mat) + .5rem);
+  }
+}
+
+/* UNIFIED HERO PAPER MAT — END */

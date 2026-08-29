@@ -1,0 +1,119 @@
+/*
+  Boulder Gardens styling for the shared photographic archive.
+*/
+
+:root {
+  --forest: var(--olive);
+  --forest-dark: var(--ink);
+  --paper-light: var(--paper-pale);
+  --paper-deep: var(--sand);
+  --terracotta: var(--clay);
+  --moss: var(--olive);
+  --ink-soft: var(--muted);
+  --display: "EB Garamond", Georgia, "Times New Roman", serif;
+  --hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+  --sans: "Source Sans 3", "Trebuchet MS", Arial, sans-serif;
+}
+
+.photo-archive-page {
+  max-width: 1180px;
+}
+
+.photo-archive-heading .kicker {
+  color: var(--clay);
+  font-family: var(--hand);
+  font-size: 1.2rem;
+}
+
+.photo-archive-heading h1 {
+  color: var(--ink);
+  font-family: var(--display);
+  font-weight: 600;
+}
+
+.photo-archive-heading .lede {
+  color: var(--muted);
+}
+
+.photo-archive-toolbar {
+  border-color: var(--line);
+}
+
+.photo-archive-filter {
+  border-color: var(--olive);
+  color: var(--ink);
+}
+
+.photo-archive-filter:hover,
+.photo-archive-filter.active {
+  color: white;
+  background: var(--olive);
+  border-color: var(--olive);
+}
+
+.photo-archive-count,
+.photo-archive-note {
+  color: var(--muted);
+}
+
+.photo-archive-card {
+  background: var(--sand);
+}
+
+.photo-archive-grid:empty::before {
+  content: "The Photo Archive template is ready. Boulder Gardens photographs will appear here as they are added.";
+  grid-column: 1 / -1;
+  padding: 3rem 1.5rem;
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  background: rgba(251, 244, 230, .48);
+  text-align: center;
+  font: 1.2rem/1.5 var(--hand);
+}
+
+.fs-gallery-viewer {
+  background: rgba(30, 32, 25, .97);
+}
+
+.fs-gallery-viewer__stage {
+  background: #1d2019;
+}
+
+.fs-gallery-viewer__caption {
+  color: var(--ink);
+  background: var(--paper-pale);
+  border-top-color: var(--sand-deep);
+  font-family: var(--hand);
+}
+
+.fs-gallery-viewer__count {
+  color: var(--olive);
+}
+
+/* DISCREET ARCHIVE DATES — BEGIN */
+
+.fs-gallery-viewer__caption-copy {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .3rem;
+}
+
+.fs-gallery-viewer__caption-separator {
+  color: var(--sand-deep);
+  font-family: "Source Sans 3", sans-serif;
+  font-size: .68rem;
+}
+
+.fs-gallery-viewer__caption-date {
+  color: var(--muted);
+  font-family: "Source Sans 3", sans-serif;
+  font-size: .64rem;
+  line-height: 1.2;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* DISCREET ARCHIVE DATES — END */

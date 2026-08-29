@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#303229">
+  <meta name="description" content="# Opening Up the Solar Charge
+
+Today we took a closer look at the Fieldstation solar system to understand why the batteries rarely seemed to charge beyond about 80 percent and why the solar array appeared to be producing less power than expected.">
+  <title>Field Report 012 — Fieldstation Solar Charging modificaton · Boulder Gardens Fieldstation</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="field-report.css">
+  <script src="site.js" defer></script>
+</head>
+<body class="report-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="wordmark" href="index.html" aria-label="Boulder Gardens Fieldstation home"><span>Boulder Gardens</span><strong>Fieldstation</strong><small>Sanctuary · Mojave Desert · Living Record</small></a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+  <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="field-reports.html" class="active" aria-current="page">Field Reports</a><a href="photos.html">Photos</a><a href="sanctuary.html">Sanctuary</a><a href="people.html">People &amp; Community</a><a href="land.html">Land & Ecology</a><a href="water.html">Water</a><a href="energy.html">Energy</a><a href="communications.html">Communications</a><a href="sensors.html">Sensors & Data</a><a href="projects.html">Projects</a><a href="archive.html">Archive</a></nav>
+</header>
+<main id="main">
+  <div class="report-masthead"><nav class="report-breadcrumb" aria-label="Breadcrumb"><a href="field-reports.html">Field Reports</a><span>·</span><a href="energy.html">Energy</a><span>·</span><span>FR012</span></nav></div>
+  <article>
+    <header class="report-hero-v2">
+      <div class="report-hero-copy">
+        <p class="report-series">Field Report 012 · Energy</p>
+        <h1>Fieldstation Solar<br>Charging<br>modificaton</h1>
+        <p class="report-deck"># Opening Up the Solar Charge
+
+Today we took a closer look at the Fieldstation solar system to understand why the batteries rarely seemed to charge beyond about 80 percent and why the solar array appeared to be producing less power than expected.</p>
+        <div class="report-byline"><span>August 18, 2026</span><span>Boulder Gardens Sanctuary</span><span>Observed by Robert Redecker</span></div>
+      </div>
+      <figure class="report-hero-media torn">
+        <img src="images/reports/fr012/hero.jpg" alt="IMG_20260818_102016.jpg" data-lightbox>
+        <figcaption><strong>Field observation</strong> # Opening Up the Solar Charge
+
+Today we took a closer look at the Fieldstation solar system to understand why the batteries rarely seemed to charge beyond about 80 percent and why the solar array appeared to be producing less power than expected.</figcaption>
+      </figure>
+    </header>
+    <section class="report-observation" aria-labelledby="observation-title">
+      <aside class="report-field-card"><h2>Field card</h2><dl><dt>Report</dt><dd>FR012</dd><dt>Location</dt><dd>Boulder Gardens Sanctuary</dd><dt>Observed</dt><dd>August 18, 2026</dd><dt>Subject</dt><dd>Energy</dd><dt>Sources</dt><dd>1</dd><dt>Photographs</dt><dd>3</dd></dl></aside>
+      <div class="report-copy"><p id="observation-title"># Opening Up the Solar Charge</p><p>Today we took a closer look at the Fieldstation solar system to understand why the batteries rarely seemed to charge beyond about 80 percent and why the solar array appeared to be producing less power than expected.</p><p>The system uses six 395-watt solar panels, an OutBack FLEXmax 60 charge controller, and a 16-cell, 280 Ah LiFePO4 battery bank managed by a JK BMS.</p><p>We started by documenting the OutBack settings instead of changing things blindly. The controller was set to 56.2 volts Absorb, 54.0 volts Float, an 18-minute Absorb period, and a 24-amp output-current limit.</p><p>One recent change immediately showed up: a battery temperature sensor that had been connected the previous week was actively lowering the charge voltages. Because LiFePO4 batteries do not use the same temperature-compensated charging strategy as lead-acid batteries, we disconnected the sensor. The controller immediately returned to its programmed 56.2 V Absorb and 54.0 V Float targets.</p><p>We also confirmed that automatic equalization is disabled. Equalization is a lead-acid charging function and is not something we want the lithium battery bank doing.</p><p>The JK BMS revealed another clue. Its 100-percent state-of-charge reference had been set higher than the voltage the OutBack normally reaches. That helped explain why Home Assistant and the BMS often stopped showing a state of charge around 80 percent even when the battery had received a good solar charge. We corrected the full-charge reference so the BMS can synchronize itself during a normal charging cycle.</p><p>Finally, we increased the FLEXmax charging limit from 24 amps to 30 amps.</p><p>The result was immediate. With full sun available, the OutBack began delivering about **30 amps at 54.5 volts — roughly 1.64 kilowatts**. At the same moment the JK BMS showed about **1.33 kilowatts actually entering the battery**. The difference is useful information too: it represents the refrigerators, network equipment, inverter overhead, and other Fieldstation loads consuming solar power before it reaches the battery.</p><p>Nothing major was replaced today. Instead, we learned more about how the existing system works and removed several conservative or mismatched settings that were keeping it from making full use of the available solar energy.</p><p>The next step is monitoring. Over the next few sunny charge cycles we will watch whether the battery now reaches a properly synchronized full state of charge and how the higher 30-amp solar limit changes daily energy collection.</p></div>
+    </section>
+    <section class="photographic-record" aria-labelledby="photo-record-title">
+      <header class="photographic-record-header">
+        <div><p class="kicker">Photographic Record</p><h2 id="photo-record-title">The work, seen in place</h2></div>
+        <p>Selected photographs from the private FieldStation source record.</p>
+      </header>
+      <div class="photo-journal"><figure class="photo-entry wide">
+          <img src="images/reports/fr012/photo-02.jpg" alt="Screenshot_20260818-095007.jpg" data-lightbox>
+          <figcaption><strong>Photographic record</strong>Source photograph 2 for FR012.</figcaption>
+        </figure><figure class="photo-entry tall torn">
+          <img src="images/reports/fr012/photo-03.jpg" alt="IMG_20260818_090634.jpg" data-lightbox>
+          <figcaption><strong>Photographic record</strong>Source photograph 3 for FR012.</figcaption>
+        </figure></div>
+    </section>
+    <section class="system-thread" aria-labelledby="thread-title"><p class="kicker">System Thread</p><h2 id="thread-title">Where this system connects</h2><div class="thread-grid"><a href="energy.html"><span>Energy</span><strong>Solar, battery storage, backup generation, and electrical loads</strong></a><a href="projects.html"><span>Projects</span><strong>Repairs, maintenance, operating practices, and later improvements</strong></a><a href="sensors.html"><span>Sensors &amp; Data</span><strong>Future monitoring of battery charge, loads, and generator use</strong></a><a href="archive.html"><span>Archive</span><strong>Workbook record, source photographs, specifications, and corrections</strong></a></div></section>
+    <section class="next-observation" aria-labelledby="next-title"><div><p class="kicker">Next Observation</p><h2 id="next-title">What changes next</h2><p>Later observations can record how this subject performs, changes, or needs attention over time.</p></div><div class="next-mark" aria-hidden="true">→</div></section>
+    <p class="report-source-note">Public synopsis derived from Boulder Gardens Fieldstation Workbook source record FR012. Detailed equipment records, calculations, unresolved questions, and corrections remain in the workbook.</p>
+  </article>
+  <section class="report-footer-nav"><a href="field-reports.html">← All field reports</a><a href="energy.html">Part of the Energy record →</a></section>
+</main>
+<footer class="site-footer"><div><strong>Boulder Gardens Fieldstation</strong><span>Observations from a living desert sanctuary</span></div><div><span>Mojave Desert · California</span><span>Workbook first · Field Reports second</span></div><a href="archive.html">Open the archive index →</a></footer>
+<div class="lightbox" hidden aria-hidden="true"><button type="button" aria-label="Close image">×</button><img alt=""><p></p></div>
+</body>
+</html>

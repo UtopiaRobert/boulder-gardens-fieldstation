@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#303229">
+  <meta name="description"
+        content="The photographic archive of Boulder Gardens Fieldstation and Sanctuary.">
+
+  <title>Photo Archive · Boulder Gardens Fieldstation</title>
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="photo-archive.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="boulder-photo-archive.css">
+
+  <script src="site.js" defer></script>
+  <script src="photo-archive-data.js" defer></script>
+  <script src="photo-archive.js" defer></script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <a class="wordmark"
+     href="index.html"
+     aria-label="Boulder Gardens Fieldstation home">
+    <span>Boulder Gardens</span>
+    <strong>Fieldstation</strong>
+    <small>Sanctuary · Mojave Desert · Living Record</small>
+  </a>
+
+  <button class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav">
+    Menu
+  </button>
+
+  <nav class="primary-nav"
+       id="primary-nav"
+       aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="field-reports.html">Field Reports</a><a href="photos.html" class="active" aria-current="page">Photos</a>
+    <a href="sanctuary.html">Sanctuary</a>
+    <a href="people.html">People &amp; Community</a>
+    <a href="land.html">Land &amp; Ecology</a>
+    <a href="water.html">Water</a>
+    <a href="energy.html">Energy</a>
+    <a href="communications.html">Communications</a>
+    <a href="sensors.html">Sensors &amp; Data</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+</header>
+
+<main id="main" class="photo-archive-page">
+
+  <header class="photo-archive-heading">
+    <p class="kicker">Photographic record</p>
+    <h1>Photo Archive</h1>
+
+    <p class="lede">
+      A growing visual record of Boulder Gardens Sanctuary:
+      its people, desert ecology, water, energy systems,
+      buildings, projects and everyday life.
+    </p>
+  </header>
+
+  <div class="photo-archive-toolbar">
+    <div class="photo-archive-filters"
+         data-photo-archive-filters
+         aria-label="Filter photographs">
+    </div>
+
+    <div class="photo-archive-count"
+         data-photo-archive-count>
+    </div>
+  </div>
+
+  <div class="photo-archive-grid"
+       data-photo-archive-grid>
+  </div>
+
+  <p class="photo-archive-note">
+    Select a photograph to open it full screen.
+    Use the left and right arrow keys to move through the archive.
+  </p>
+
+</main>
+
+<footer class="site-footer">
+  <div>
+    <strong>Boulder Gardens Fieldstation</strong>
+    <span>Observations from a living desert sanctuary</span>
+  </div>
+
+  <div>
+    <span>Mojave Desert · California</span>
+    <span>Workbook first · Field Reports second</span>
+  </div>
+
+  <a href="archive.html">Open the archive index →</a>
+</footer>
+
+</body>
+</html>

@@ -2831,3 +2831,230 @@ main p a:not(.text-link) {
 }
 
 /* UNIFIED-SITE-HERO:END */
+
+/* ORGANIC FIELDSTATION REFINEMENT — BEGIN */
+
+:root {
+  --organic-shadow: 0 12px 28px rgba(78, 55, 30, .13);
+  --organic-shadow-deep: 0 20px 45px rgba(65, 46, 26, .18);
+  --pencil-line: rgba(71, 75, 60, .27);
+}
+
+/* A sun-faded Mojave field-notebook surface */
+body {
+  font-family: "Source Sans 3", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(circle at 12% 15%,
+      rgba(94, 72, 38, .055) 0 1px,
+      transparent 1.7px),
+    radial-gradient(circle at 83% 68%,
+      rgba(94, 72, 38, .045) 0 1px,
+      transparent 1.5px),
+    linear-gradient(112deg,
+      rgba(255,255,255,.16),
+      transparent 42%),
+    linear-gradient(180deg,
+      rgba(195,148,66,.035),
+      transparent 38%),
+    var(--paper);
+  background-size: 13px 13px, 19px 19px, auto, auto, auto;
+}
+
+/* Consistent naturalist-journal typography */
+h1,
+h2,
+h3,
+h4,
+.section-heading h2,
+.page-hero h1 {
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -.012em;
+}
+
+.kicker,
+.chapter-label,
+.page-status,
+.hand-note,
+figcaption {
+  font-family: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+}
+
+.kicker,
+.chapter-label {
+  color: var(--clay);
+  font-size: 1.18rem;
+  letter-spacing: .02em;
+}
+
+figcaption {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+/* Warmer paper header with a lightly imperfect lower edge */
+.site-header {
+  background:
+    radial-gradient(circle at 18% 25%,
+      rgba(117, 66, 54, .04) 0 1px,
+      transparent 1.5px),
+    linear-gradient(96deg,
+      rgba(255,255,255,.24),
+      transparent 48%),
+    rgba(243, 229, 204, .96);
+  background-size: 15px 15px, auto, auto;
+  border-bottom-color: var(--pencil-line);
+  box-shadow: 0 5px 18px rgba(70, 51, 30, .08);
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  right: 1%;
+  bottom: -1px;
+  height: 2px;
+  pointer-events: none;
+  opacity: .55;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--sand-deep) 9%,
+      var(--olive) 52%,
+      var(--clay) 88%,
+      transparent
+    );
+  transform: rotate(-.04deg);
+}
+
+/* The Fieldstation name now uses the font already loaded by the site */
+.wordmark > strong {
+  font-family: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+  font-size: 1.62rem;
+  font-weight: 600;
+  letter-spacing: .015em;
+}
+
+/* Quieter, less mechanical navigation */
+.primary-nav a {
+  font-family: "Source Sans 3", "Trebuchet MS", Arial, sans-serif;
+  border-radius: 2px 8px 3px 7px / 7px 3px 8px 2px;
+  transition:
+    color .16s ease,
+    background .16s ease,
+    transform .16s ease;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus-visible {
+  color: var(--clay-dark);
+  background: rgba(255,255,255,.28);
+  transform: translateY(-1px) rotate(-.2deg);
+}
+
+.primary-nav a.active,
+.primary-nav a[aria-current="page"] {
+  color: var(--clay-dark);
+  background: rgba(195, 148, 66, .13);
+}
+
+/* Paper sections gain depth without obscuring their information */
+.paper-section {
+  background-image:
+    radial-gradient(circle at 20% 30%,
+      rgba(94, 72, 38, .035) 0 1px,
+      transparent 1.5px),
+    linear-gradient(104deg,
+      rgba(255,255,255,.12),
+      transparent 55%);
+  background-size: 17px 17px, auto;
+}
+
+.paper-section.soft {
+  background-color: rgba(251, 244, 230, .50);
+}
+
+/* Organic edges for the site's recurring cards */
+.chapter-card,
+.project-card,
+.report-card,
+.system-card,
+.feature-card,
+.archive-flow article,
+.record-table {
+  border-color: var(--pencil-line);
+  border-radius: 3px 10px 4px 8px / 8px 4px 10px 3px;
+  box-shadow: var(--organic-shadow);
+}
+
+/* Photographs and illustrations sit like physical field records */
+.page-hero-image,
+.chapter-cover-frame,
+.sketch-figure,
+.torn {
+  border-radius: 2px 9px 3px 7px / 8px 3px 9px 2px;
+  filter: drop-shadow(0 13px 17px rgba(68, 48, 27, .16));
+}
+
+/* Buttons resemble small field labels rather than app controls */
+.hero-button,
+.primary-button,
+.fieldstation-gallery__browse,
+.photo-archive-filter {
+  border-radius: 2px 8px 3px 7px / 7px 3px 8px 2px;
+  font-family: "Source Sans 3", "Trebuchet MS", Arial, sans-serif;
+  box-shadow: 0 7px 14px rgba(70, 49, 28, .12);
+}
+
+/* A warmer closing edge */
+.site-footer {
+  border-top-color: var(--pencil-line);
+  background-image:
+    radial-gradient(circle at 80% 30%,
+      rgba(255,255,255,.035) 0 1px,
+      transparent 1.5px),
+    linear-gradient(100deg,
+      rgba(195,148,66,.06),
+      transparent 52%);
+  background-size: 17px 17px, auto;
+}
+
+::selection {
+  color: var(--ink);
+  background: rgba(195, 148, 66, .32);
+}
+
+@media (max-width: 900px) {
+  .primary-nav a:hover,
+  .primary-nav a:focus-visible {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primary-nav a {
+    transition: none;
+  }
+}
+
+/* ORGANIC FIELDSTATION REFINEMENT — END */
+
+/* SQUARE PHOTOGRAPH EDGES — BEGIN */
+
+.page-hero-image,
+.page-hero-image img,
+.chapter-cover-frame,
+.chapter-cover-frame img,
+.sketch-figure,
+.sketch-figure img,
+.chapter-card img,
+.project-card img,
+.report-card img,
+.field-report-photo,
+.field-report-photo img {
+  border-radius: 0 !important;
+}
+
+/* SQUARE PHOTOGRAPH EDGES — END */
