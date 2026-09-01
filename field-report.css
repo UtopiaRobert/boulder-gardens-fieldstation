@@ -672,3 +672,88 @@
 }
 
 /* FIELDSTATION-REPORT-FULL-CIRCLE-HARMONY-0.5.4:END */
+
+/* FIELDSTATION-UNIFORM-REPORT-PHOTOS:START */
+
+/* Every Field Report photograph receives the same square-edged paper matte. */
+.report-page .report-hero-media,
+.report-page .photo-entry,
+.report-page .photo-entry.instrument {
+  margin-left: 0;
+  margin-right: 0;
+  padding: clamp(.48rem, 1vw, .72rem);
+  overflow: visible;
+  clip-path: none;
+  transform: none;
+  border: 1px solid rgba(48, 50, 41, .22);
+  border-radius: 0;
+  background: var(--paper-pale, #fbf4e6);
+  box-shadow:
+    0 16px 34px rgba(78, 55, 30, .13),
+    0 2px 5px rgba(78, 55, 30, .07);
+}
+
+/* The 4:3 frame is consistent; contain preserves the complete photograph. */
+.report-page .report-hero-media img,
+.report-page .photo-entry img,
+.report-page .photo-entry.instrument img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center;
+  border: 1px solid rgba(48, 50, 41, .14);
+  border-radius: 0;
+  background: #e7ddcc;
+  box-shadow: none;
+}
+
+.report-page .report-hero-media::after {
+  display: none;
+}
+
+.report-page .report-hero-media figcaption,
+.report-page .photo-entry figcaption {
+  margin: .68rem .15rem .08rem;
+  padding: 0;
+}
+
+/* Supporting photographs form a calm, equal two-column record. */
+.report-page .photo-journal {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.35rem, 2.6vw, 2.4rem);
+  align-items: start;
+}
+
+.report-page .photo-entry,
+.report-page .photo-entry.wide,
+.report-page .photo-entry.tall,
+.report-page .photo-entry.half-left,
+.report-page .photo-entry.half-right,
+.report-page .photo-entry.full,
+.report-page .photo-entry.instrument {
+  grid-column: auto;
+  align-self: start;
+  margin-top: 0;
+  margin-bottom: 0;
+  transform: none;
+}
+
+@media (max-width: 760px) {
+  .report-page .photo-journal {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .report-page .report-hero-media,
+  .report-page .photo-entry,
+  .report-page .photo-entry.instrument {
+    padding: .45rem;
+  }
+}
+
+/* FIELDSTATION-UNIFORM-REPORT-PHOTOS:END */
