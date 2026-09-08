@@ -13,20 +13,31 @@
   <link rel="stylesheet" href="chapter-hero-normalize.css">
   <link rel="stylesheet" href="chapter-banner.css">
   <link rel="stylesheet" href="land-from-above.css">
+<!-- CLIMATE-WEATHER-CSS:START -->
+  <link rel="stylesheet" href="climate-weather.css">
+<!-- CLIMATE-WEATHER-CSS:END -->
+  <link rel="stylesheet" href="permaculture-zones.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+<header class="site-header fieldstation-header">
   <a class="wordmark" href="index.html" aria-label="Boulder Gardens Fieldstation home">
     <span>Boulder Gardens</span>
     <strong>Fieldstation</strong>
     <small>Sanctuary · Mojave Desert · Living Record</small>
   </a>
-  <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-  <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
-    <a href="index.html">Home</a><a href="field-reports.html">Field Reports</a><a href="photos.html">Photos</a><a href="sanctuary.html">Sanctuary</a><a href="people.html">People &amp; Community</a><a href="land.html" class="active" aria-current="page">Land & Ecology</a><a href="water.html">Water</a><a href="energy.html">Energy</a><a href="communications.html">Communications</a><a href="sensors.html">Sensors & Data</a><a href="projects.html">Projects</a>
-  </nav>
+
+  <div class="header-actions">
+    <a href="index.html">Home</a><a href="field-reports.html">Field Reports</a><a href="photos.html">Photos</a>
+    <button class="field-index-button" type="button" aria-expanded="false" aria-controls="field-index-panel">Field Index</button>
+  </div>
+
+  <div class="field-index-panel" id="field-index-panel">
+    <div class="field-index-inner">
+      <section class="field-index-group"><h2>Place</h2><div class="field-index-links"><a href="sanctuary.html">Sanctuary</a><a href="garth-bowles.html">Garth Bowles Biography</a><a href="people.html">People &amp; Community</a></div></section><section class="field-index-group"><h2>Land</h2><div class="field-index-links"><a href="land.html" class="active" aria-current="page">Land &amp; Ecology</a><a href="climate-weather.html">Climate &amp; Weather</a></div></section><section class="field-index-group"><h2>Systems</h2><div class="field-index-links"><a href="water.html">Water</a><a href="energy.html">Energy</a><a href="communications.html">Communications</a><a href="sensors.html">Sensors &amp; Data</a></div></section><section class="field-index-group"><h2>Work & Record</h2><div class="field-index-links"><a href="projects.html">Projects</a><a href="field-reports.html">Field Reports</a><a href="photos.html">Photos</a><a href="archive.html">Archive</a></div></section>
+    </div>
+  </div>
 </header>
 
 <main id="main">
@@ -42,9 +53,65 @@
     <figcaption>Observation before interpretation.</figcaption>
   </figure>
 </section>
+
+<!-- PERMACULTURE-ZONES:START -->
+<section class="permaculture-zones" id="permaculture-zones" aria-labelledby="permaculture-zones-title">
+  <header class="permaculture-zones__intro">
+    <p class="kicker">Patterns of Human Use</p>
+    <h2 id="permaculture-zones-title">Permaculture zones at Boulder Gardens</h2>
+    <p class="permaculture-zones__lead">At Boulder Gardens, zones describe patterns of habitation, infrastructure, movement, and human attention. They are not rings around a single garden or residence.</p>
+    <p>Because the sanctuary has several dispersed living areas, its zones appear as separate islands of activity within a much larger wild landscape. The maps document how the land is currently used and can change as those patterns evolve.</p>
+  </header>
+
+  <figure class="permaculture-zone-map permaculture-zone-map--wide">
+    <img src="images/land/permaculture-zones/boulder-gardens-permaculture-zones-wide.svg"
+         alt="Wide aerial map of Boulder Gardens showing several separate areas designated as Permaculture Zones 1, 2 and 3 within the larger unmarked Zone 5 landscape."
+         loading="lazy">
+    <figcaption>Wide view of the inhabited landscape. Colored areas mark Zones 1–3; the uncolored majority is Zone 5.</figcaption>
+  </figure>
+
+  <div class="permaculture-zone-key" aria-label="Boulder Gardens permaculture zone descriptions">
+    <article class="permaculture-zone-card permaculture-zone-card--one">
+      <span>Zone 1</span>
+      <h3>Frequent activity</h3>
+      <p>The most-used shared areas and places with concentrated infrastructure, visited and observed throughout the day.</p>
+    </article>
+    <article class="permaculture-zone-card permaculture-zone-card--two">
+      <span>Zone 2</span>
+      <h3>Private habitation</h3>
+      <p>Trailers, tiny homes, yurts, and the immediate surroundings of these private living spaces.</p>
+    </article>
+    <article class="permaculture-zone-card permaculture-zone-card--three">
+      <span>Zone 3</span>
+      <h3>Camping and circulation</h3>
+      <p>Campsites and places people regularly walk through, gather in, or use less intensively.</p>
+    </article>
+    <article class="permaculture-zone-card permaculture-zone-card--five">
+      <span>Zone 5</span>
+      <h3>Untouched sanctuary</h3>
+      <p>Most of Boulder Gardens remains unmarked and completely untouched—a place for habitat, observation, and natural processes.</p>
+    </article>
+  </div>
+
+  <figure class="permaculture-zone-map permaculture-zone-map--detail">
+    <img src="images/land/permaculture-zones/boulder-gardens-permaculture-zones-detail.svg"
+         alt="Closer aerial view showing the relationship between Boulder Gardens activity areas, private habitations, campsites and walking routes."
+         loading="lazy">
+    <figcaption>Closer view of the principal habitation and activity areas. Zone boundaries are approximate patterns of use, not surveyed divisions.</figcaption>
+  </figure>
+</section>
+<!-- PERMACULTURE-ZONES:END -->
 <section class="paper-section">
   <div class="field-matrix">
-    <article><span>01</span><h2>Weather</h2><p>Temperature, wind, rain, cloud cover, and unusual events.</p></article>
+    <!-- LAND-WEATHER-TILE:START -->
+    <article class="weather-storm-tile field-matrix-weather">
+      <span>Nearby gauge</span>
+      <strong>0.44"</strong>
+      <small>September 6, 2026</small>
+      <em>≈126% of the historical September monthly average</em>
+      <a class="weather-storm-more" href="climate-weather.html">Climate &amp; Weather →</a>
+    </article>
+    <!-- LAND-WEATHER-TILE:END -->
     <article><span>02</span><h2>Wildlife</h2><p>Tracks, calls, nests, sightings, and camera observations.</p></article>
     <article><span>03</span><h2>Plants</h2><p>Flowering, fruiting, dormancy, stress, and recovery.</p></article>
     <article><span>04</span><h2>Soil</h2><p>Moisture, temperature, compost, texture, and erosion.</p></article>
@@ -52,6 +119,31 @@
     <article><span>06</span><h2>Seasonal Change</h2><p>Repeated photographs and measurements from fixed locations.</p></article>
   </div>
 </section>
+<!-- CLIMATE-WEATHER-ENTRY:START -->
+<section class="climate-entry" aria-labelledby="climate-entry-title">
+  <div class="climate-entry-card">
+    <figure class="climate-entry-photo">
+      <img src="images/chapters/covers/water-after-rain.jpg" alt="Rainwater collecting in the rocky high desert at Boulder Gardens." loading="lazy">
+      <figcaption>Water collecting at the Upper Garden after a big rain • August 8, 2026</figcaption>
+    </figure>
+
+    <div class="climate-entry-copy">
+      <p class="kicker">Weather &amp; climate</p>
+      <h2 id="climate-entry-title">Climate &amp; Weather</h2>
+      <p>Rain, temperature, wind, and seasonal change shape nearly every ecological system at Boulder Gardens. This growing record places local observations beside the longer climate history of the surrounding high desert.</p>
+
+      <div class="climate-entry-numbers" aria-label="Climate reference figures">
+        <div><strong>4.77"</strong><span>Historical annual average · Joshua Tree</span></div>
+        <div><strong>0.35"</strong><span>Historical September average</span></div>
+        <div><strong>0.44"</strong><span>Sept. 6, 2026 · nearby Pioneertown gauge</span></div>
+      </div>
+
+      <a class="text-link" href="climate-weather.html">Explore the climate record →</a>
+    </div>
+  </div>
+</section>
+<!-- CLIMATE-WEATHER-ENTRY:END -->
+
 <section class="closing-quote small">
   <blockquote>Not every observation needs an explanation. Some only need a date.</blockquote>
 </section>
@@ -85,32 +177,6 @@
     <div><strong>≈ 6 miles</strong><span>Estimated distance</span></div>
     <div><strong>640 acres</strong><span>Sanctuary area</span></div>
   </div>
-
-  <div class="four-corners-section-heading">
-    <p class="four-corners-kicker">Reading the land</p>
-    <h3>Map first. Then feet.</h3>
-    <p>A map gives the outline; walking gives the scale, grade, texture, and effort.</p>
-  </div>
-
-  <div class="four-corners-maps">
-    <figure>
-      <img src="assets/four-corners-hike/four-corners-parcel-context.jpg"
-           alt="Aerial parcel-map context for the Boulder Gardens area with private ownership labels removed."
-           loading="lazy">
-      <figcaption><strong>Parcel context</strong> A public-facing reference used to understand the sanctuary’s scale. Private ownership labels and exact coordinates have been removed.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="assets/four-corners-hike/four-corners-aerial-core.jpg"
-           alt="Aerial view of boulders, tracks, vegetation, and structures in the inhabited core of Boulder Gardens."
-           loading="lazy">
-      <figcaption><strong>The boulder core</strong> Roads, footpaths, structures, and granite outcrops become a small part of a much larger landscape when seen from above.</figcaption>
-    </figure>
-  </div>
-
-  <blockquote class="four-corners-quote">
-    “The map gives the outline. Walking gives the scale.”
-  </blockquote>
 
   <div class="four-corners-section-heading">
     <p class="four-corners-kicker">Photographic record</p>
@@ -188,41 +254,29 @@
       </div>
     </div>
 
-    <figure class="land-map land-map-hero">
+    <!-- NEW-LAND-CONTEXT-MAPS:START -->
+    <figure class="land-map land-map-hero land-map-context-new">
       <img
-        src="assets/land-from-above/garths-boulder-gardens-widest.png"
-        alt="Wide satellite view showing Boulder Gardens within the surrounding Mojave Desert landscape."
+        src="assets/land-from-above/boulder-gardens-and-neighbors.png"
+        alt="Wide aerial map showing Boulder Gardens outlined among neighboring parcels, roads, mountains, and desert terrain."
         loading="lazy">
       <figcaption>
-        <strong>The larger landscape</strong>
-        Roads, mountain slopes, washes, and settlement patterns place Boulder Gardens
-        within a much wider desert system.
+        <strong>Boulder Gardens and its neighbors</strong>
+        The sanctuary’s one-square-mile footprint sits within a wider landscape of mountains, washes, roads, parcels, and sparsely settled desert.
       </figcaption>
     </figure>
 
-    <figure class="land-map land-map-wide">
+    <figure class="land-map land-map-wide land-map-context-new">
       <img
-        src="assets/land-from-above/garths-boulder-gardens-wider.png"
-        alt="Regional satellite view centered on Boulder Gardens and surrounding desert parcels."
+        src="assets/land-from-above/boulder-gardens-and-neighbors-closeup.png"
+        alt="Closer aerial parcel map showing the white boundary of Boulder Gardens and its immediate neighbors."
         loading="lazy">
       <figcaption>
-        <strong>Moving closer</strong>
-        The sanctuary sits between developed desert roads and large areas of open,
-        rocky terrain.
+        <strong>The sanctuary boundary</strong>
+        A closer view locates Boulder Gardens among neighboring parcels and the terrain surrounding Godsway Love.
       </figcaption>
     </figure>
-
-    <figure class="land-map land-map-wide">
-      <img
-        src="assets/land-from-above/garths-boulder-gardens-wide.png"
-        alt="Satellite parcel view showing Boulder Gardens and the surrounding Rimrock landscape."
-        loading="lazy">
-      <figcaption>
-        <strong>Parcel scale</strong>
-        Property lines are useful reference marks, but the ecological landscape
-        continues across them.
-      </figcaption>
-    </figure>
+    <!-- NEW-LAND-CONTEXT-MAPS:END -->
   </div>
 
 
@@ -293,6 +347,19 @@
         <p>Closer views show how lightly roads, structures, gardens, and gathering places sit within the granite landscape.</p>
       </div>
     </div>
+
+    <!-- BOULDER-GARDENS-KEY-AREAS:START -->
+    <figure class="land-map land-map-wide land-map-context-new land-map-key-areas">
+      <img
+        src="assets/land-from-above/boulder-gardens-key-areas.png"
+        alt="Aerial map identifying key Boulder Gardens locations including the Village, gardens, caves, amphitheater, Lookout, property entrance, and Bus Workshop."
+        loading="lazy">
+      <figcaption>
+        <strong>Key areas</strong>
+        Named places show how habitation, infrastructure, gathering spaces, and paths form a small network within the wider sanctuary.
+      </figcaption>
+    </figure>
+    <!-- BOULDER-GARDENS-KEY-AREAS:END -->
 
     <figure class="land-map land-map-wide">
       <img
@@ -368,7 +435,10 @@
     <p class="kicker">Field Reports</p>
     <h2>Observations connected to Land &amp; Ecology</h2>
   </header>
-  <div class="latest-report-layout" data-report="FR013">
+  <div class="latest-report-layout" data-report="FR017">
+      <figure class="report-photo torn"><img src="images/reports/fr017/hero.jpg" alt="First real rain of the season!"><figcaption>September 6, 2026 · Boulder Gardens Sanctuary</figcaption></figure>
+      <article class="report-excerpt"><p class="report-label">Land &amp; Ecology · Boulder Gardens Sanctuary</p><h3>First real rain of the season!</h3><p>Tropical Rain Reaches Boulder Gardens September 6–7, 2026 An unusually strong early-September rain event for the Mojave Desert, delivering roughly half an inch of rain — more than the area typically receives during the entire month of September.</p><a class="text-link" href="report-017.html">Read the full observation →</a></article>
+    </div><div class="latest-report-layout" data-report="FR013">
       <figure class="report-photo torn"><img src="images/reports/fr013/hero.jpg" alt="Fire Clearance"><figcaption>August 21, 2026 · Village</figcaption></figure>
       <article class="report-excerpt"><p class="report-label">Land &amp; Ecology · Village</p><h3>Fire Clearance</h3><p>Fire clearance around my place in the Village.</p><a class="text-link" href="report-013.html">Read the full observation →</a></article>
     </div><div class="latest-report-layout" data-report="FR010">

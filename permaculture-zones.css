@@ -1,0 +1,129 @@
+/* Boulder Gardens Permaculture Zones
+   Activity and habitation appear as small islands within an unmarked Zone 5. */
+
+.permaculture-zones {
+  padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 18% 15%, rgba(167, 95, 70, .06), transparent 28rem),
+    var(--paper-pale);
+}
+
+.permaculture-zones__intro {
+  width: min(880px, 100%);
+  margin: 0 auto clamp(2rem, 4vw, 3.6rem);
+  text-align: center;
+}
+
+.permaculture-zones__intro h2 {
+  margin: .1rem 0 1rem;
+  color: var(--ink);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.permaculture-zones__intro p {
+  margin: .8rem auto 0;
+}
+
+.permaculture-zones__lead {
+  color: var(--clay-dark);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(1.25rem, 2.1vw, 1.65rem);
+  line-height: 1.42;
+}
+
+.permaculture-zone-map {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  padding: clamp(.42rem, 1vw, .72rem);
+  background: var(--paper-pale);
+  border: 1px solid rgba(48, 50, 41, .18);
+  border-radius: 0;
+  box-shadow:
+    0 16px 34px rgba(70, 50, 28, .15),
+    0 2px 5px rgba(70, 50, 28, .08);
+}
+
+.permaculture-zone-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.permaculture-zone-map figcaption {
+  padding: .65rem .35rem .08rem;
+  color: var(--muted);
+  font-family: "Caveat", "Architects Daughter", "Segoe Print", cursive;
+  font-size: clamp(1rem, 1.6vw, 1.22rem);
+  line-height: 1.3;
+}
+
+.permaculture-zone-key {
+  width: min(1320px, 100%);
+  margin: clamp(2rem, 4vw, 3.6rem) auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.permaculture-zone-card {
+  position: relative;
+  padding: 1.4rem 1.3rem 1.5rem;
+  background: rgba(255, 255, 255, .38);
+  border: 1px solid var(--line);
+  border-top: .34rem solid var(--zone-color);
+  border-radius: 0;
+}
+
+.permaculture-zone-card span {
+  color: var(--zone-color);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.permaculture-zone-card h3 {
+  margin: .32rem 0 .55rem;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.permaculture-zone-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .94rem;
+  line-height: 1.55;
+}
+
+.permaculture-zone-card--one { --zone-color: #619646; }
+.permaculture-zone-card--two { --zone-color: #398f99; }
+.permaculture-zone-card--three { --zone-color: #b8792e; }
+.permaculture-zone-card--five { --zone-color: #66685d; }
+
+.permaculture-zone-map--detail {
+  width: min(1080px, 100%);
+}
+
+@media (max-width: 980px) {
+  .permaculture-zone-key {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .permaculture-zones {
+    padding-inline: .75rem;
+  }
+
+  .permaculture-zone-key {
+    grid-template-columns: 1fr;
+  }
+}

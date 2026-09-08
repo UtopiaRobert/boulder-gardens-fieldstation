@@ -3157,3 +3157,452 @@ figcaption {
 }
 
 /* MESHTASTIC COMMUNICATIONS FEATURE — END */
+
+/* FIELDSTATION MAP ATMOSPHERE — BEGIN */
+
+/*
+  A hand-drawn map sits beneath a restrained left-to-right wash.
+  The former clay-red ending is replaced by a quiet lichen/sage tone so the
+  color change remains natural but no longer calls attention to itself.
+*/
+body {
+  background-color: var(--paper, #eee0c7);
+  background-image:
+    radial-gradient(circle at 16% 22%,
+      rgba(74, 59, 37, .035) 0 1px,
+      transparent 1.55px),
+    linear-gradient(100deg,
+      rgba(247, 235, 207, .93) 0%,
+      rgba(237, 225, 193, .92) 54%,
+      rgba(202, 203, 171, .91) 100%),
+    url("assets/backgrounds/hand-drawn-permaculture-map.jpg");
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-position: 0 0, center, center;
+  background-size: 17px 17px, cover, cover;
+  background-attachment: fixed, fixed, fixed;
+}
+
+/* Let the map breathe through the recurring paper sections without
+   weakening the cards and information panels placed on top of them. */
+.paper-section,
+.paper-section.soft,
+.journal-spread,
+.chapter-index,
+.latest-report {
+  background-color: rgba(251, 244, 230, .62);
+}
+
+/* All top-level introductions follow the transparent Social Permaculture
+   treatment, allowing the map atmosphere to remain continuous behind them. */
+.site-standard-hero,
+.page-hero.site-standard-hero,
+.chapter-hero.site-standard-hero {
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Empty labels should never leave a bordered phantom square. */
+.site-standard-hero :is(.page-hero-copy, .chapter-hero-copy, .hero-copy) > :empty,
+.site-standard-hero .page-status:empty {
+  display: none !important;
+}
+
+/* The founder pathways read as quiet handwritten links, not buttons. */
+.sanctuary-founder-hero .garth-hero-actions {
+  margin-top: 1.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .45rem 1.35rem;
+}
+
+/* On Sanctuary the two pathways sit directly below the photograph rather
+   than interrupting the introductory copy. */
+.sanctuary-founder-hero .garth-hero-actions-below {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: calc(-1 * clamp(.7rem, 2vw, 1.5rem));
+  align-self: start;
+  justify-content: center;
+}
+
+.sanctuary-founder-hero .garth-hero-actions a,
+.sanctuary-founder-hero .garth-hero-actions a:first-child {
+  padding: .1rem 0 !important;
+  color: var(--olive, #68705a) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-decoration-color: rgba(104, 112, 90, .34);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .22em;
+  transform: none !important;
+}
+
+.sanctuary-founder-hero .garth-hero-actions a:hover,
+.sanctuary-founder-hero .garth-hero-actions a:focus-visible {
+  color: var(--clay-dark, #754236) !important;
+  text-decoration-color: currentColor;
+}
+
+/* water.css uses variables that are not defined in every version of the
+   site. These explicit fallbacks keep the key statistics readable over the
+   new map atmosphere. */
+.water-page .water-facts {
+  background: rgba(47, 66, 43, .90) !important;
+  color: #fffdf3 !important;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .13),
+              inset 0 -1px rgba(29, 43, 27, .24);
+}
+
+.water-page .water-facts div {
+  border-right-color: rgba(255, 255, 255, .20) !important;
+}
+
+.water-page .water-facts strong {
+  color: #fffdf3 !important;
+  text-shadow: 0 1px 1px rgba(27, 39, 24, .28);
+}
+
+.water-page .water-facts span {
+  color: #edf2e8 !important;
+}
+
+/* The navigation remains calm and readable over the livelier page. */
+.site-header {
+  background-color: rgba(248, 240, 216, .94);
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 800px) {
+  body {
+    background-size: 17px 17px, cover, auto 100vh;
+    background-position: 0 0, center, 48% top;
+    background-attachment: scroll, scroll, scroll;
+  }
+
+  .sanctuary-founder-hero .garth-hero-actions-below { margin-top: -.35rem; }
+}
+
+@media print {
+  body {
+    background: #fff !important;
+  }
+}
+
+/* FIELDSTATION MAP ATMOSPHERE — END */
+
+/* FIELDSTATION-HEADER-REVAMP:START */
+/* Boulder Gardens Fieldstation — simple header + one Field Index panel */
+
+.site-header.fieldstation-header {
+  min-height: 88px;
+  padding: .72rem clamp(1rem, 3.5vw, 4rem);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 8px 8px, rgba(117,66,54,.04) 0 1px, transparent 1.4px),
+    rgba(243,229,204,.97);
+  background-size: 16px 16px, auto;
+  backdrop-filter: blur(12px);
+}
+
+.fieldstation-header .wordmark {
+  flex: 0 0 auto;
+}
+
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(.7rem, 1.4vw, 1.25rem);
+}
+
+.header-actions > a {
+  color: var(--olive);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  padding: .35rem 0 .25rem;
+}
+
+.header-actions > a:hover,
+.header-actions > a.active {
+  color: var(--clay);
+  border-bottom-color: var(--clay);
+}
+
+.field-index-button {
+  appearance: none;
+  border: 1px solid rgba(48,50,41,.26);
+  border-radius: 0;
+  background: rgba(250,244,232,.72);
+  color: var(--ink);
+  cursor: pointer;
+  min-height: 38px;
+  padding: .58rem .82rem;
+  font: inherit;
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+.field-index-button:hover,
+.field-index-button:focus-visible,
+.site-header.index-open .field-index-button {
+  color: var(--clay-dark);
+  border-color: var(--clay);
+  background: rgba(250,244,232,.96);
+}
+
+/* Full-width field index. Hidden until the single button opens it. */
+.field-index-panel {
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: none;
+  padding: clamp(1.2rem, 2.6vw, 2.2rem) clamp(1rem, 3.5vw, 4rem);
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(100deg, rgba(255,255,255,.12), transparent 60%),
+    rgba(243,229,204,.995);
+  box-shadow: 0 15px 30px rgba(78,55,30,.12);
+}
+
+.site-header.index-open .field-index-panel {
+  display: block;
+}
+
+.field-index-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.field-index-group {
+  min-width: 0;
+}
+
+.field-index-group h2 {
+  margin: 0 0 .55rem;
+  color: var(--clay);
+  font-family: "Source Sans 3", "Trebuchet MS", Arial, sans-serif;
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.field-index-links {
+  display: grid;
+  gap: .2rem;
+}
+
+.field-index-links a {
+  display: block;
+  position: relative;
+  padding: .62rem .68rem .65rem;
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgba(48,50,41,.12);
+  background: transparent;
+  color: var(--olive);
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 1.04rem;
+  font-weight: 600;
+  line-height: 1.05;
+  text-decoration: none;
+}
+
+.field-index-links a::after {
+  content: "→";
+  position: absolute;
+  right: .7rem;
+  color: var(--clay);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .12s ease, transform .12s ease;
+}
+
+.field-index-links a:hover,
+.field-index-links a:focus-visible,
+.field-index-links a.active {
+  color: var(--clay-dark);
+  border-color: rgba(167,95,70,.2);
+  background: rgba(250,244,232,.7);
+}
+
+.field-index-links a:hover::after,
+.field-index-links a:focus-visible::after,
+.field-index-links a.active::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.field-index-links a.active {
+  border-left: 3px solid var(--clay);
+  padding-left: .55rem;
+}
+
+/* Reusable storm highlight for the weather placeholders. */
+.weather-storm-tile {
+  padding: clamp(1.7rem, 3vw, 2.6rem);
+  background: var(--olive);
+  color: white;
+  box-shadow: 10px 12px 0 rgba(169,87,62,.14);
+}
+
+.weather-storm-tile > span,
+.weather-storm-tile > small {
+  display: block;
+  color: rgba(255,255,255,.74);
+  font-size: .67rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.weather-storm-tile > strong {
+  display: block;
+  margin: .35rem 0 .7rem;
+  color: white;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(3.7rem, 6vw, 6.2rem);
+  font-weight: 400;
+  line-height: .86;
+}
+
+.weather-storm-tile > em {
+  display: block;
+  margin-top: 1.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,.26);
+  color: white;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .site-header.fieldstation-header {
+    gap: 1rem;
+    padding-inline: 1rem;
+  }
+
+  .header-actions > a {
+    display: none;
+  }
+
+  .field-index-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem 1.6rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header.fieldstation-header {
+    min-height: 80px;
+  }
+
+  .fieldstation-header .wordmark small {
+    display: none;
+  }
+
+  .field-index-button {
+    min-height: 36px;
+    padding: .5rem .65rem;
+    font-size: .62rem;
+  }
+
+  .field-index-panel {
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding: 1rem;
+  }
+
+  .field-index-inner {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .field-index-group h2 {
+    margin-bottom: .35rem;
+  }
+
+  .field-index-links a {
+    padding: .55rem .6rem;
+  }
+}
+/* FIELDSTATION-HEADER-REVAMP:END */
+
+/* LAND-WEATHER-TILE:START */
+/* The current weather event occupies the former generic Weather slot. */
+.field-matrix .field-matrix-weather {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 0 !important;
+  background: var(--olive) !important;
+  color: white !important;
+  box-shadow: 10px 12px 0 rgba(169,87,62,.14);
+}
+
+.field-matrix .field-matrix-weather > span,
+.field-matrix .field-matrix-weather > strong,
+.field-matrix .field-matrix-weather > small,
+.field-matrix .field-matrix-weather > em {
+  position: relative;
+  z-index: 1;
+  color: white !important;
+}
+
+.field-matrix .field-matrix-weather > span,
+.field-matrix .field-matrix-weather > small {
+  color: rgba(255,255,255,.74) !important;
+}
+
+.weather-storm-more {
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: white !important;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.45);
+}
+
+.weather-storm-more:hover,
+.weather-storm-more:focus-visible {
+  color: white !important;
+  border-bottom-color: white;
+}
+
+@media (max-width: 700px) {
+  .field-matrix .field-matrix-weather {
+    min-height: 260px;
+  }
+}
+/* LAND-WEATHER-TILE:END */

@@ -55,3 +55,44 @@
     if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
   });
 })();
+
+/* SITE-DROPDOWN-NAV:START */
+(() => {
+  const header = document.querySelector('.site-header.fieldstation-header');
+  const button = document.querySelector('.field-index-button');
+  const panel = document.querySelector('.field-index-panel');
+
+  if (!header || !button || !panel) return;
+
+  function closeIndex() {
+    header.classList.remove('index-open');
+    button.setAttribute('aria-expanded', 'false');
+    button.textContent = 'Field Index';
+  }
+
+  function openIndex() {
+    header.classList.add('index-open');
+    button.setAttribute('aria-expanded', 'true');
+    button.textContent = 'Close Index';
+  }
+
+  button.addEventListener('click', event => {
+    event.preventDefault();
+    const open = header.classList.contains('index-open');
+    if (open) closeIndex();
+    else openIndex();
+  });
+
+  panel.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeIndex);
+  });
+
+  document.addEventListener('click', event => {
+    if (!header.contains(event.target)) closeIndex();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeIndex();
+  });
+})();
+/* SITE-DROPDOWN-NAV:END */

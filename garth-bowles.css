@@ -1,0 +1,411 @@
+/* Garth Bowles biography — Boulder Gardens Fieldstation */
+
+.garth-page {
+  --garth-green: #3f4a35;
+  --garth-green-soft: #68705a;
+  --garth-gold: #b48b48;
+  --garth-rust: #a75f46;
+}
+
+.garth-hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(2.4rem, 6vw, 6.5rem) clamp(1.2rem, 5vw, 5rem);
+  display: grid;
+  grid-template-columns: minmax(250px, .72fr) minmax(0, 1.55fr);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  align-items: center;
+}
+
+.garth-hero-copy { max-width: 31rem; }
+
+.garth-hero h1 {
+  margin: .2rem 0 .7rem;
+  color: var(--garth-green);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(4.8rem, 10vw, 9rem);
+  font-weight: 500;
+  line-height: .74;
+  letter-spacing: -.045em;
+}
+
+.garth-role {
+  max-width: 18ch;
+  margin: 1.4rem 0 0;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(1.65rem, 3vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.02;
+}
+
+.garth-deck {
+  max-width: 31rem;
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  line-height: 1.18;
+  transform: rotate(-.5deg);
+}
+
+.garth-hero-photo,
+.garth-portrait {
+  position: relative;
+  margin: 0;
+  padding: .62rem;
+  background: var(--paper-pale);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 42px rgba(70, 50, 28, .18);
+}
+
+.garth-hero-photo img,
+.garth-portrait img {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.garth-hero-photo figcaption,
+.garth-portrait figcaption {
+  position: absolute;
+  left: 1.3rem;
+  bottom: 1.3rem;
+  max-width: calc(100% - 2.6rem);
+  padding: .42rem .75rem;
+  color: var(--ink);
+  background: rgba(251, 244, 230, .92);
+  box-shadow: 0 4px 14px rgba(48, 50, 41, .12);
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  line-height: 1.1;
+  transform: rotate(-.35deg);
+}
+
+.garth-introduction {
+  padding: clamp(3rem, 7vw, 6rem) clamp(1.2rem, 7vw, 7rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, .8fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  background: var(--paper-pale);
+  border-block: 1px solid var(--line);
+}
+
+.garth-introduction-copy { max-width: 52rem; }
+
+.garth-page h2 {
+  margin: .25rem 0 1.1rem;
+  color: var(--garth-green);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(2.3rem, 4.4vw, 4.2rem);
+  font-weight: 500;
+  line-height: .98;
+}
+
+.garth-introduction p,
+.garth-legacy-copy > p,
+.garth-closing p {
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+}
+
+.welcome-note {
+  align-self: center;
+  padding: clamp(1.7rem, 4vw, 3.2rem);
+  background: linear-gradient(135deg, rgba(255,255,255,.36), transparent 65%), rgba(238, 224, 199, .82);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px rgba(78, 55, 30, .11);
+  transform: rotate(.45deg);
+}
+
+.welcome-note h2 {
+  font-style: italic;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+}
+
+.garth-timeline-section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(3.8rem, 8vw, 7rem) clamp(1.2rem, 5vw, 5rem);
+}
+
+.garth-section-heading { margin-bottom: 3.5rem; }
+
+.garth-section-heading h2 {
+  margin-top: .25rem;
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+}
+
+.garth-timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.5rem 1.5rem;
+  list-style: none;
+}
+
+.garth-timeline::before {
+  content: "";
+  position: absolute;
+  top: .52rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--garth-green-soft);
+}
+
+.garth-timeline li {
+  position: relative;
+  padding-top: 2rem;
+}
+
+.garth-timeline li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.05rem;
+  height: 1.05rem;
+  background: var(--garth-green-soft);
+  border: .25rem solid var(--paper);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--garth-green-soft);
+}
+
+.garth-timeline time,
+.garth-timeline .timeline-time {
+  display: block;
+  color: var(--garth-rust);
+  font: 700 .82rem/1.2 "Source Sans 3", Arial, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.garth-timeline h3 {
+  margin: .45rem 0;
+  color: var(--garth-green);
+  font: 600 1.35rem/1.05 "EB Garamond", Georgia, serif;
+}
+
+.garth-timeline p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .98rem;
+  line-height: 1.48;
+}
+
+.garth-legacy {
+  padding: clamp(3.5rem, 7vw, 7rem) clamp(1.2rem, 7vw, 7rem);
+  display: grid;
+  grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+  background: var(--paper-pale);
+  border-block: 1px solid var(--line);
+}
+
+.garth-legacy-copy h2 {
+  font-size: clamp(2.1rem, 3.7vw, 3.6rem);
+  font-style: italic;
+}
+
+.legacy-values {
+  margin-top: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem;
+}
+
+.legacy-values article {
+  padding: 1rem 1.1rem;
+  border-top: 2px solid var(--garth-gold);
+  background: rgba(238, 224, 199, .48);
+}
+
+.legacy-values h3 {
+  margin: 0 0 .2rem;
+  color: var(--garth-green);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.25rem;
+}
+
+.legacy-values p { margin: 0; color: var(--muted); font-size: .92rem; }
+
+.garth-closing {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1.2rem, 5vw, 5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(250px, .7fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.garth-closing blockquote {
+  margin: 0;
+  padding-left: 2rem;
+  color: var(--garth-green);
+  border-left: 1px solid var(--garth-gold);
+  font: italic clamp(1.8rem, 3.2vw, 3rem)/1.12 "EB Garamond", Georgia, serif;
+}
+
+.garth-backlinks {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(1.2rem, 5vw, 5rem) 4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.garth-backlinks a {
+  color: var(--garth-green);
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .24em;
+}
+
+.garth-record-note {
+  margin: 1.4rem 0 0;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--garth-clay);
+  background: rgba(251, 244, 230, .72);
+  color: var(--garth-ink);
+  font-size: .92rem;
+  line-height: 1.55;
+}
+
+.garth-secondary-link {
+  margin: 0;
+  padding: clamp(2.2rem, 5vw, 4rem) clamp(1.2rem, 7vw, 7rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  border-top: 1px solid var(--garth-line);
+  border-bottom: 1px solid var(--garth-line);
+  background: var(--paper-pale);
+  color: var(--garth-ink);
+}
+
+.garth-secondary-link h2 {
+  margin: .2rem 0 .5rem;
+  color: inherit;
+  font: 500 clamp(2.2rem, 4vw, 3.8rem)/1 "EB Garamond", Georgia, serif;
+}
+
+.garth-secondary-link p { margin: 0; max-width: 62ch; }
+
+.garth-secondary-link a,
+.garth-hero-actions a {
+  padding: .8rem 1.15rem;
+  border: 1px solid var(--garth-green-soft);
+  color: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.garth-secondary-link a:hover,
+.garth-secondary-link a:focus-visible { background: rgba(36, 66, 46, .08); }
+
+/* Sanctuary always opens on a pale paper panel with dark, readable copy. */
+.sanctuary-founder-hero {
+  background: var(--paper-pale) !important;
+  color: var(--garth-ink) !important;
+}
+
+.sanctuary-founder-hero h1,
+.sanctuary-founder-hero .kicker {
+  color: var(--garth-green) !important;
+}
+
+.sanctuary-founder-hero .page-intro,
+.sanctuary-founder-hero .page-status {
+  color: var(--garth-ink) !important;
+}
+
+/* Compatibility for an older founder panel until the installer removes it. */
+.garth-sanctuary-link {
+  background: var(--paper-pale) !important;
+  color: var(--garth-ink) !important;
+}
+
+.garth-sanctuary-link h2,
+.garth-sanctuary-link p,
+.garth-sanctuary-link .kicker {
+  color: var(--garth-ink) !important;
+}
+
+.sanctuary-founder-hero .page-status {
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  text-transform: none;
+  letter-spacing: .01em;
+}
+
+.garth-hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.garth-hero-actions a {
+  border-color: var(--garth-green-soft);
+  color: var(--garth-green);
+  font-weight: 700;
+}
+
+.garth-hero-actions a:first-child {
+  background: var(--garth-green);
+  color: var(--paper-pale);
+}
+
+.garth-hero-actions a:hover,
+.garth-hero-actions a:focus-visible {
+  box-shadow: 0 5px 14px rgba(48, 50, 41, .14);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .garth-hero,
+  .garth-introduction,
+  .garth-legacy { grid-template-columns: 1fr; }
+
+  .garth-hero-copy { max-width: 42rem; }
+  .garth-timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .garth-hero h1 { font-size: clamp(4.2rem, 23vw, 6.7rem); }
+
+  .garth-timeline {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    padding-left: 1.8rem;
+  }
+
+  .garth-timeline::before {
+    top: 0;
+    bottom: 0;
+    left: .5rem;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+
+  .garth-timeline li { padding-top: 0; }
+  .garth-timeline li::before { top: .1rem; left: -1.8rem; }
+  .legacy-values { grid-template-columns: 1fr; }
+  .garth-closing,
+  .garth-secondary-link { grid-template-columns: 1fr; }
+  .garth-closing blockquote { padding-left: 1.2rem; }
+  .garth-backlinks { flex-direction: column; }
+
+  .garth-hero-photo figcaption,
+  .garth-portrait figcaption {
+    left: 1rem;
+    bottom: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+}

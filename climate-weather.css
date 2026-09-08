@@ -1,0 +1,630 @@
+/* Climate & Weather
+   Scoped companion styles for climate-weather.html and its Land & Ecology entry.
+   No global redesigns live here. */
+
+.climate-entry {
+  max-width: var(--max);
+  margin: 0 auto clamp(4rem, 8vw, 7rem);
+  padding: 0 clamp(1.2rem, 5vw, 5.5rem);
+}
+
+.climate-entry-card {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.15fr) minmax(320px, .85fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: stretch;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(250,244,232,.38);
+  padding: clamp(1.2rem, 2.5vw, 2rem) 0;
+}
+
+.climate-entry-photo {
+  position: relative;
+  margin: 0;
+  min-height: 390px;
+  overflow: hidden;
+  background: var(--paper-pale);
+}
+
+.climate-entry-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  object-fit: cover;
+}
+
+.climate-entry-photo::after,
+.climate-hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 36%;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(28,27,22,.62), rgba(28,27,22,0));
+}
+
+.climate-entry-photo figcaption,
+.climate-hero-photo figcaption {
+  position: absolute;
+  z-index: 2;
+  left: 1.15rem;
+  right: 1.15rem;
+  bottom: .9rem;
+  color: rgba(255,255,255,.92);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: .9rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,.45);
+}
+
+.climate-entry-copy {
+  align-self: center;
+  padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 2.4rem) clamp(1rem, 3vw, 2rem) 0;
+}
+
+.climate-entry-copy h2 {
+  margin: .4rem 0 1rem;
+  font-size: clamp(2.8rem, 5vw, 5.2rem);
+  line-height: .92;
+  letter-spacing: -.035em;
+}
+
+.climate-entry-copy > p:not(.kicker) {
+  max-width: 620px;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.16rem;
+}
+
+.climate-entry-numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1.7rem 0 1.6rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.climate-entry-numbers div {
+  padding: 1rem .75rem 1rem 0;
+  border-right: 1px solid var(--line);
+}
+
+.climate-entry-numbers div + div { padding-left: .85rem; }
+.climate-entry-numbers div:last-child { border-right: 0; }
+
+.climate-entry-numbers strong {
+  display: block;
+  color: var(--olive);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+  line-height: 1;
+}
+
+.climate-entry-numbers span {
+  display: block;
+  margin-top: .45rem;
+  color: var(--muted);
+  font-size: .64rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+
+/* Dedicated climate page */
+
+.climate-page {
+  overflow: hidden;
+}
+
+.climate-back {
+  display: block;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.15rem clamp(1.2rem, 5vw, 5.5rem) 0;
+  color: var(--clay-dark);
+  text-decoration: none;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.climate-hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.2rem, 5vw, 5.5rem) clamp(4rem, 7vw, 7rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.13fr) minmax(340px, .87fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.climate-hero-photo {
+  position: relative;
+  margin: 0;
+  min-height: 560px;
+  overflow: hidden;
+  box-shadow: 0 20px 48px var(--paper-shadow);
+  background: var(--paper-pale);
+}
+
+.climate-hero-photo img {
+  width: 100%;
+  min-height: 560px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.climate-hero-copy h1 {
+  margin: .55rem 0 1.2rem;
+  font-size: clamp(4rem, 7.8vw, 7.5rem);
+  line-height: .83;
+  letter-spacing: -.055em;
+}
+
+.climate-deck {
+  margin: 0 0 1rem;
+  color: var(--olive);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+  font-style: italic;
+  line-height: 1.1;
+}
+
+.climate-lede {
+  max-width: 610px;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(1.08rem, 1.8vw, 1.3rem);
+}
+
+.climate-reference,
+.rainfall-section,
+.weather-patterns,
+.ecology-motion,
+.climate-sources {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(4.5rem, 8vw, 8rem) clamp(1.2rem, 5vw, 5.5rem);
+}
+
+.climate-reference {
+  border-top: 1px solid var(--line);
+}
+
+.climate-reference > header,
+.weather-patterns > header,
+.ecology-intro,
+.climate-sources {
+  max-width: 850px;
+}
+
+.climate-reference h2,
+.rainfall-heading h2,
+.weather-patterns h2,
+.ecology-motion h2,
+.climate-sources h2,
+.storm-feature h2,
+.fieldstation-climate-notes h2 {
+  margin: .35rem 0 1rem;
+  font-size: clamp(2.6rem, 5vw, 5.1rem);
+  line-height: .95;
+  letter-spacing: -.025em;
+}
+
+.climate-reference > header > p:last-child,
+.rainfall-heading > p,
+.ecology-intro > p:last-child,
+.climate-sources > p {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.climate-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2.4rem;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.climate-stat-grid article {
+  min-height: 205px;
+  padding: clamp(1.35rem, 2.5vw, 2.1rem);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(250,244,232,.28);
+}
+
+.climate-stat-grid article.event-stat {
+  background: rgba(104,112,90,.09);
+}
+
+.climate-stat-grid span,
+.climate-stat-grid small,
+.storm-number span,
+.storm-number small {
+  display: block;
+  color: var(--muted);
+  font-size: .69rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.climate-stat-grid strong {
+  display: block;
+  margin: .45rem 0 .8rem;
+  color: var(--olive);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(3rem, 5vw, 5.1rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.rainfall-section {
+  background: rgba(250,244,232,.4);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.rainfall-heading {
+  display: grid;
+  grid-template-columns: minmax(300px, .9fr) minmax(300px, 1.1fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: end;
+  margin-bottom: 3rem;
+}
+
+.rainfall-heading > p {
+  margin: 0;
+}
+
+.rain-chart {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: .7rem;
+  min-height: 430px;
+  padding: 2rem 1.4rem 1.4rem;
+  border: 1px solid var(--line);
+  background:
+    repeating-linear-gradient(to top, transparent 0 24.7%, rgba(48,50,41,.08) 24.8% 25%),
+    rgba(251,244,230,.72);
+}
+
+.rain-axis {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--muted);
+  font-size: .68rem;
+}
+
+.rain-bars {
+  height: 390px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(32px, 1fr));
+  gap: clamp(.35rem, 1vw, .85rem);
+  align-items: end;
+}
+
+.rain-month {
+  height: 390px;
+  display: grid;
+  grid-template-rows: 350px 28px;
+  gap: .7rem;
+  align-items: end;
+  text-align: center;
+  color: var(--muted);
+  font-size: .72rem;
+}
+
+.rain-bar {
+  position: relative;
+  align-self: end;
+  width: 100%;
+  height: var(--rain-height);
+  min-height: 4px;
+  background:
+    linear-gradient(to right, rgba(255,255,255,.10), transparent 50%),
+    var(--olive);
+  box-shadow: inset 0 0 0 1px rgba(48,50,41,.10);
+}
+
+.rain-bar b {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + .28rem);
+  transform: translateX(-50%);
+  color: var(--ink);
+  font-size: .68rem;
+  font-weight: 700;
+}
+
+.climate-hand-note {
+  margin: 1.3rem 0 0;
+  color: var(--clay);
+  font-family: "Architects Daughter", "Segoe Print", "Bradley Hand", cursive;
+  font-size: clamp(1.25rem, 2.3vw, 2rem);
+  transform: rotate(-1deg);
+}
+
+.storm-feature {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 9rem) clamp(1.2rem, 5vw, 5.5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.storm-copy > p:not(.kicker) {
+  max-width: 760px;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.16rem;
+}
+
+.storm-number {
+  padding: clamp(2rem, 4vw, 3.6rem);
+  border: 1px solid var(--line);
+  background: var(--olive);
+  color: white;
+  box-shadow: 11px 13px 0 rgba(169,87,62,.14);
+}
+
+.storm-number span,
+.storm-number small {
+  color: rgba(255,255,255,.73);
+}
+
+.storm-number strong {
+  display: block;
+  margin: .35rem 0 .65rem;
+  color: white;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(4.4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: .85;
+}
+
+.storm-number i {
+  display: block;
+  margin-top: 1.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255,255,255,.28);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.1rem;
+}
+
+.weather-patterns {
+  border-top: 1px solid var(--line);
+}
+
+.weather-timeline {
+  margin-top: 2.7rem;
+  border-left: 1px solid var(--olive);
+}
+
+.weather-timeline article {
+  position: relative;
+  padding: .2rem 1rem 2.7rem 2.2rem;
+  max-width: 920px;
+}
+
+.weather-timeline article::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: .48rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--olive);
+  box-shadow: 0 0 0 5px var(--paper);
+}
+
+.weather-timeline article:last-child { padding-bottom: 0; }
+
+.weather-timeline span,
+.ecology-cards span {
+  color: var(--clay);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.weather-timeline h3,
+.ecology-cards h3 {
+  margin: .25rem 0 .55rem;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1;
+}
+
+.weather-timeline p,
+.ecology-cards p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.ecology-motion {
+  border-top: 1px solid var(--line);
+}
+
+.ecology-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.8rem;
+}
+
+.ecology-cards article {
+  min-height: 270px;
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+  border: 1px solid var(--line);
+  background: rgba(250,244,232,.46);
+}
+
+.fieldstation-climate-notes {
+  max-width: none;
+  padding: clamp(4.5rem, 8vw, 7.5rem) max(clamp(1.2rem, 5vw, 5.5rem), calc((100vw - var(--max)) / 2 + clamp(1.2rem, 5vw, 5.5rem)));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .75fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  background: rgba(104,112,90,.13);
+  border-top: 1px solid rgba(104,112,90,.24);
+  border-bottom: 1px solid rgba(104,112,90,.24);
+}
+
+.fieldstation-climate-notes > div > p:last-child {
+  max-width: 760px;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.16rem;
+}
+
+.fieldstation-climate-notes ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-self: center;
+}
+
+.fieldstation-climate-notes li {
+  padding: .8rem 0 .8rem 1.6rem;
+  position: relative;
+  border-bottom: 1px solid rgba(48,50,41,.12);
+}
+
+.fieldstation-climate-notes li::before {
+  content: "•";
+  position: absolute;
+  left: .25rem;
+  color: var(--olive);
+  font-size: 1.4rem;
+}
+
+.climate-sources {
+  max-width: 1040px;
+}
+
+.climate-sources .kicker,
+.climate-sources h2 { text-align: left; }
+
+.climate-source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2rem;
+  margin-top: 1.8rem;
+}
+
+.climate-next {
+  max-width: var(--max);
+  margin: 0 auto clamp(5rem, 9vw, 9rem);
+  padding: 0 clamp(1.2rem, 5vw, 5.5rem);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.climate-next a {
+  min-height: 150px;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-right: 0;
+  background: rgba(250,244,232,.52);
+  text-decoration: none;
+}
+
+.climate-next a:last-child { border-right: 1px solid var(--line); }
+
+.climate-next span {
+  display: block;
+  color: var(--clay);
+  font-size: .67rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.climate-next strong {
+  display: block;
+  margin-top: .7rem;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+
+@media (max-width: 900px) {
+  .climate-entry-card,
+  .climate-hero,
+  .rainfall-heading,
+  .storm-feature,
+  .fieldstation-climate-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .climate-entry-copy { padding-right: 1rem; }
+
+  .climate-stat-grid,
+  .ecology-cards,
+  .climate-next {
+    grid-template-columns: 1fr;
+  }
+
+  .climate-stat-grid article,
+  .climate-next a {
+    min-height: auto;
+  }
+
+  .climate-next a {
+    border-right: 1px solid var(--line);
+    border-bottom: 0;
+  }
+
+  .climate-next a:last-child { border-bottom: 1px solid var(--line); }
+
+  .rain-chart {
+    overflow-x: auto;
+  }
+
+  .rain-bars {
+    min-width: 760px;
+  }
+}
+
+@media (max-width: 600px) {
+  .climate-entry-photo,
+  .climate-entry-photo img {
+    min-height: 300px;
+  }
+
+  .climate-entry-numbers {
+    grid-template-columns: 1fr;
+  }
+
+  .climate-entry-numbers div,
+  .climate-entry-numbers div + div {
+    padding: .8rem 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .climate-entry-numbers div:last-child { border-bottom: 0; }
+
+  .climate-hero-photo,
+  .climate-hero-photo img {
+    min-height: 410px;
+  }
+
+  .climate-hero-copy h1 {
+    font-size: clamp(3.6rem, 18vw, 5rem);
+  }
+
+  .rain-chart {
+    grid-template-columns: 42px 1fr;
+    padding-inline: .8rem;
+  }
+}
