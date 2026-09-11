@@ -1,0 +1,88 @@
+
+/*
+  Boulder Gardens Sanctuary - journal-family accents
+  Handwritten note + slanted rule only.
+  No olive leaf and no ornament glyphs.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap');
+
+:root {
+  --sanctuary-clay: var(--clay, #a45f43);
+  --sanctuary-olive: #6e7958;
+  --sanctuary-ink: var(--ink, #2d3328);
+  --sanctuary-hand: "Architects Daughter", "Segoe Print", "Bradley Hand", cursive;
+  --sanctuary-serif: "EB Garamond", Garamond, Georgia, serif;
+}
+
+.sanctuary-founder-hero .page-hero-copy {
+  position: relative;
+}
+
+.sanctuary-journal-note {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 1rem;
+  padding-bottom: .32rem;
+  color: var(--sanctuary-clay);
+  font: 1.28rem/1.05 var(--sanctuary-hand);
+  transform: rotate(-.35deg);
+}
+
+.sanctuary-journal-note::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: -1.25rem;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--sanctuary-clay) 0 78%, rgba(164,95,67,0) 100%);
+  transform: rotate(-1.15deg);
+  transform-origin: left center;
+}
+
+.sanctuary-founder-hero .page-hero-copy > .kicker {
+  color: var(--sanctuary-olive);
+  font-family: var(--sanctuary-hand);
+  font-size: 1rem;
+  letter-spacing: .015em;
+  text-transform: none;
+}
+
+.sanctuary-founder-hero .page-hero-copy h1 {
+  font-family: var(--sanctuary-serif);
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+
+.sanctuary-founder-hero .page-intro {
+  max-width: 38rem;
+  color: var(--sanctuary-ink);
+  font-family: var(--sanctuary-hand);
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.58;
+}
+
+body:has(.sanctuary-founder-hero) .section-heading .kicker,
+body:has(.sanctuary-founder-hero) .atlas-label,
+body:has(.sanctuary-founder-hero) .observation-tag,
+body:has(.sanctuary-founder-hero) .report-label {
+  font-family: var(--sanctuary-hand);
+  text-transform: none;
+  letter-spacing: .01em;
+}
+
+body:has(.sanctuary-founder-hero) .paper-section .section-heading::after {
+  content: "";
+  display: block;
+  width: min(180px, 44vw);
+  height: 1px;
+  margin: 1rem auto 0;
+  background: linear-gradient(90deg, var(--sanctuary-clay), transparent);
+  transform: rotate(-.4deg);
+  opacity: .55;
+}
+
+@media (max-width: 760px) {
+  .sanctuary-journal-note { font-size: 1.12rem; }
+}
