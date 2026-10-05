@@ -205,3 +205,25 @@
   .chapters-from-land .chapter-grid,
   .chapter-photo-gallery { grid-template-columns: 1fr; }
 }
+
+/* COMMUNITY FIELD TRIP DIVIDER */
+.field-trip-divider {
+  width: min(72%, 360px);
+  height: 1px;
+  margin: 2.4rem auto;
+  background: rgba(83, 73, 53, 0.24);
+  position: relative;
+}
+
+.field-trip-divider::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  background: #f4eedc;
+  border: 1px solid rgba(83, 73, 53, 0.34);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
