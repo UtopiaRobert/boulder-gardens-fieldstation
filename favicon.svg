@@ -1,7 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="14" fill="#2d332c"/>
-<circle cx="45" cy="18" r="8" fill="#c18b3f"/>
-<path d="M7 50 C18 37 28 47 38 35 C45 27 53 34 59 29 V60 H7Z" fill="#a9573e"/>
-<ellipse cx="29" cy="43" rx="14" ry="7" fill="#6c5943"/>
-<path d="M16 18v24M9 27h14" stroke="#7f8a72" stroke-width="4" stroke-linecap="round"/>
+  <!-- warm background -->
+  <rect width="64" height="64" rx="10" fill="#f3ead7"/>
+
+  <!-- sun -->
+  <circle cx="32" cy="22" r="13" fill="#c96f45"/>
+
+  <!-- hills -->
+  <path d="M2 43 Q15 31 27 40 Q37 30 62 43 L62 64 L2 64 Z"
+        fill="#7b8261"/>
+
+  <!-- teepee canvas -->
+  <path d="M16 57 L32 19 L48 57 Z"
+        fill="#e8d3ad"
+        stroke="#4a2f22"
+        stroke-width="3"
+        stroke-linejoin="round"/>
+
+  <!-- poles -->
+  <path d="M32 20 L25 8 M32 20 L32 5 M32 20 L39 8"
+        stroke="#4a2f22"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <!-- doorway -->
+  <path d="M27 57 L32 43 L37 57 Z"
+        fill="#b95f3b"
+        stroke="#4a2f22"
+        stroke-width="2"/>
+
+  <!-- simple earth stripe -->
+  <path d="M20 46 L27 48 M44 46 L37 48"
+        stroke="#b95f3b"
+        stroke-width="3"
+        stroke-linecap="round"/>
 </svg>
